@@ -1,0 +1,255 @@
+.subscribe-calendar {
+    position: relative;
+    width: 100%;
+    min-height: 510px;
+
+    &__container {
+        padding-bottom: 100px;
+        position: relative;
+        @include tablet-scr {
+            padding-bottom: 70px;
+        }
+        @include mini-tablet-scr {
+            padding-bottom: 40px;
+        }
+        
+        .pickers {
+            &__wrapper {
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-start;
+                @include tablet-scr {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .inActive {
+                    opacity: 0.7;
+                    pointer-events: none;
+                }
+
+                .vc {
+                    &-container {
+                        border: none;
+                        background-color: $tagBody;
+                        box-shadow: $smoothShadow;
+                        padding: 40px 2.45vw;
+                        font-family: 'campton';
+                        border-radius: 18px;
+                        margin-bottom: 40px;
+                        @include computer-scr {
+                            margin-bottom: 100px;
+                            padding: 40px 6vw;
+                        }
+                        @include tablet-scr {
+                            margin-bottom: 170px;
+                        }
+                        @include mini-tablet-scr {
+                            padding: 25px 12vw;
+                            margin-bottom: 40px;
+                        }
+                        @include mobile-scr {
+                            padding: 25px 9vw;
+                        }
+
+                        .is-disabled {
+                            pointer-events: none !important;
+                            color: $tagText;
+                        }
+                    }
+
+                    &-dot {
+                        background-color: $brandColor !important;
+                        border-radius: 50% !important;
+                    }
+
+                    &-pane {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin: 0 15px;
+                    }
+
+                    &-header {
+                        padding-bottom: 25px;
+                    }
+
+                    &-arrow {
+                        color: $brandColor;
+                    }
+
+                    &-day-content {
+                        &:focus,
+                        &:active {
+                            background-color: $brandColor;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            
+            &__select-forms {
+                width: 100%;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-around;
+                @include mini-tablet-scr {
+                    position: unset;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .hidden {
+                    display: none;
+                }
+
+                .icon {
+                    &-hidden {
+                       display: none; 
+                    }
+
+                    &-shown {
+                        display: inherit;
+                        color: $brandColor;
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            &__select {
+                width: 30%;
+                @include tablet-scr {
+                    width: 35%;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__location {
+                width: 40%;
+                @include tablet-scr {
+                    margin-bottom: 30px;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                }
+
+                &-title {
+                    width: 100%;
+                    text-align: start;
+                    @include lg-computer-scr {
+                        width: 90%;
+                    }
+
+                    h3 {
+                        margin-top: 10px;
+                        font-size: 30px;
+                        font-weight: $semiBold;
+                        text-transform: uppercase;
+                        color: $brandColor;
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        font-weight: $medium;
+                        font-size: 20px;
+                        line-height: 25px;
+                        color: $tagText;
+
+                        strong {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                &-select {
+                    margin-top: 50px;
+                    padding-left: 3vw;
+                    @include lg-computer-scr {
+                        padding-left: 1vw;
+                    }
+                    @include tablet-scr {
+                        margin-top: 20px;
+                    }
+                }
+
+                &-checkbox {
+                    margin: 5px 0;
+                    @include tablet-scr {
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            &__schedule {
+                width: 60%;
+                @include mini-tablet-scr {
+                    width: 100%;
+                }
+                .schedule-card {
+                    position: relative;
+                    display: block;
+                    margin-bottom: 15px;
+                    user-select: none;
+                    background-color: $tagBody;
+                    box-shadow: $smoothShadow;
+                    border: 3px solid transparent;
+                    cursor: pointer;
+                    border-radius: 18px;
+                    transition: border-color 0.3s;
+                    padding: 20px;
+                    text-align: left;
+                    > div {
+                        text-align: left;
+                        margin-bottom: 5px;
+                    }
+                    &:hover,
+                    &.is-active {
+                        border-color: $brandColor;
+                    }
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                    }
+
+                    &__title {
+                        font-weight: $medium;
+                        margin-bottom: 15px;
+                        font-size: 20px;
+                    }
+
+                    &__date {
+                        color: #808080;
+                    }
+
+                    &__time {
+                        color: #808080;
+                        text-align: right;
+                    }
+
+                    &__lecturer {
+                        font-weight: $medium;
+                        font-size: 20px;
+                        margin: 10px 0;
+                        span {
+                            color: #808080;
+                            font-size: 14px;
+                        }
+                    }
+                    
+                    &__places {
+                        color: $brandColor;
+                        font-weight: $medium;
+                    }
+                }
+            }
+        }
+    }
+
+    &__disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

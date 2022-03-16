@@ -1,0 +1,35 @@
+.download-app-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    a {
+        height: fit-content;
+        width: fit-content;
+        margin-right: 25px;
+        @include mobile-scr {
+            margin-right: 15px;
+        }
+
+        .image {
+            width: 140px;
+            height: auto;
+            border-radius: 7px;
+            background: black;
+            box-shadow: $strongShadow;
+            transition: all 0.3s ease;
+            @include mini-tablet-scr {
+                width: 100px;
+                height: auto;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            a {
+                box-shadow: $smoothShadow;
+                transform: scale(1.01);
+            }
+        }
+    }    
+}

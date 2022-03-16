@@ -1,0 +1,118 @@
+.support{
+    &-cards {
+        padding: 65px 0 0 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 28%;
+        flex-wrap: wrap;
+        @include lg-computer-scr {
+            width: 30%;
+        }
+        @include computer-scr {
+            width: 100%;
+        }
+        @include mobile-scr {
+            justify-content: center;
+        }
+
+        &-links {
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            @include computer-scr {
+                flex-direction: row;
+            }
+            @include mobile-scr {
+                justify-content: center;
+            }
+        }
+
+        &__item {
+            @extend %flexRowStartCenter;
+            flex-direction: row;
+            border-radius: 18px;
+            padding: 20px 25px;
+            margin-bottom: 30px;
+            width: 100%;
+            height: auto;
+            text-align: start;
+            text-decoration: none;
+            background-color: $tagBody;
+            box-shadow: $smoothShadow;
+            transition: all 0.2s ease;
+            @include computer-scr {
+                width: 30%;
+                padding: 20px 10px;
+            }
+            @include tablet-scr {
+                width: 40%;
+            }
+            @include mini-tablet-scr {
+                width: 49%;
+            }
+            @include mobile-scr {
+                width: 80%;
+                padding: 20px 25px;
+            }
+
+            .image-wrapper {
+                width: 30%;
+                @extend %flexCenter;
+
+                .icon {
+                    width: auto;
+                    max-height: 55px;
+                    @include xl-computer-scr {
+                        max-height: 54px;
+                    }
+                    @include lg-computer-scr {
+                        height: 60px;
+                    }
+                    @include computer-scr {
+                        height: 50px;
+                    }
+                    @include tablet-scr {
+                        height: 70px;
+                    }
+                    @include mini-tablet-scr {
+                        height: 65px;
+                    }
+                }
+            }
+
+            .text-wrapper {
+                width: 70%;
+                @extend %flexCenter;
+                padding: 0 0 0 10px;
+
+                .title {
+                    color: $black;
+                    font-size: 20px;
+                    width: 70%;
+                    font-weight: $medium;
+                    margin: 0 0 10px 0;
+                }
+    
+                .route {
+                    position: relative;
+                    font-size: 15px;
+                    color: $brandColor;
+                    font-weight: $medium;
+                    overflow: hidden;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                transform: scale(1.03);
+
+                .route {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+}

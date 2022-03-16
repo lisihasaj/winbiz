@@ -1,0 +1,412 @@
+
+// All etapes and form styling of components is included here
+.contact {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    background-color: $white;
+
+    &__container {
+        width: 100%;
+        height: auto;
+
+        .message-box {
+            width: 100%;
+            margin: 60px 0;
+        }
+    }
+
+    &__etapes {
+        width: 100%;
+        margin-bottom: 100px;
+        @include tablet-scr {
+            margin-bottom: 70px;
+        }
+        @include mini-tablet-scr {
+            margin-bottom: 40px;
+        }
+
+        .etape {
+            width: 100%;
+            padding: 60px 0;
+            border-bottom: 1px solid $tagBody;
+            @include mini-tablet-scr {
+                padding: 50px 0;
+            }
+
+            &__title {
+                width: 100%;
+                text-align: start;
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: $semiBold;
+                    color: $brandColor;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 25px;
+                    font-weight: $medium;
+                    color: $brandColor;
+                }
+            }
+
+            &__cards {
+                width: 100%;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                @include mobile-scr {
+                    justify-content: center;
+                }
+
+                .radio-card {
+                    position: relative;
+                    width: 32%;
+                    height: 75px;
+                    margin-bottom: 15px;
+                    @include tablet-scr {
+                        width: 47%;
+                        margin-bottom: 25px;
+                    }
+                    @include mini-tablet-scr {
+                        width: 49%;
+                    }
+                    @include mobile-scr {
+                        width: 90%;
+                    }
+
+                    &__wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 18px;
+                        background-color: $tagBody;
+                        box-shadow: $smoothShadow;
+                        display: flex;
+                        border-width: 3px;
+                        border-style: solid;
+                        border-color: transparent;
+                        cursor: pointer;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 10%;
+                        transition: all 0.2s ease;
+                        z-index: 2;
+
+                        &:hover {
+                            border-color: $brandColor;
+                        }
+
+                        figure,
+                        img {
+                            position: absolute;
+                            left: 10%;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            height: auto;
+                            width: auto;
+                            @include computer-scr {
+                                left: 5%;
+                            }
+                            @include tablet-scr {
+                                left: 10%;
+                            }
+                        }
+
+                        p {
+                            position: absolute;
+                            right: 10%;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            height: fit-content;
+                            font-size: 18px;
+                            font-weight: $medium;
+                            color: $tagText;
+                            text-transform: uppercase;
+                            @include computer-scr {
+                                right: 5%;
+                            }
+                            @include tablet-scr {
+                                right: 10%;
+                            }
+                        }
+                    }
+
+                    &__input {
+                        position: absolute;
+                    }
+                }
+
+                input[type='radio']:checked + .radio-card__wrapper {
+                    border-color: $brandColor;
+                }
+
+                .etape-three-card {
+                    position: relative;
+                    width: 32%;
+                    height: 235px;
+                    margin-bottom: 15px;
+                    @include tablet-scr {
+                        width: 47%;
+                        margin-bottom: 25px;
+                    }
+                    @include mini-tablet-scr {
+                        width: 49%;
+                    }
+                    @include mobile-scr {
+                        width: 90%;
+                    }
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+
+                        .active {
+                            border-color: $brandColor;
+                        }
+                    }
+
+                    &__upper {
+                        width: 100%;
+                    }
+
+                    &__wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 18px;
+                        background-color: $tagBody;
+                        box-shadow: $smoothShadow;
+                        border-width: 3px;
+                        border-style: solid;
+                        border-color: transparent;
+                        cursor: pointer;
+                        padding: 10%;
+                        transition: all 0.2s ease;
+                        z-index: 2;
+
+                        &:hover {
+                            border-color: $brandColor;
+                        }
+
+                        h6 {
+                            position: absolute;
+                            top: 17%;
+                            right: 10%;
+                            text-align: end;
+                            font-size: 18px;
+                            height: fit-content;
+                            width: fit-content;
+                            font-weight: $medium;
+                            color: $tagText;
+                            text-transform: uppercase;
+                            line-height: 0px;
+                            @include computer-scr {
+                                right: 5%;
+                            }
+                            @include tablet-scr {
+                                right: 10%;
+                            }
+                        }
+
+                        figure,
+                        img {
+                            position: absolute;
+                            top: 10%;
+                            left: 10%;
+                            height: auto;
+                            width: auto;
+                            @include computer-scr {
+                                left: 5%;
+                            }
+                            @include tablet-scr {
+                                left: 10%;
+                            }
+                        }
+
+                        p {
+                            position: absolute;
+                            top: 10%;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            margin: auto;
+                            height: fit-content;
+                            width: 85%;
+                            font-size: 16px;
+                            font-weight: $medium;
+                            color: $tagText;
+                            text-align: center;
+                        }
+                    }
+
+                    &__input {
+                        position: absolute;
+                    }
+
+                    &__link {
+                        position: absolute;
+                        bottom: 10%;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: $medium;
+                        color: $brandColor;
+                    }
+                }
+            }
+        }
+
+        .three {
+            border: none;
+        }
+    }
+
+    &-form {
+        width: 100%;
+
+        &__container {
+            width: 100%;
+            height: auto;
+            justify-content: flex-start;
+            @include mini-tablet-scr {
+                justify-content: center;
+            }
+        }
+        
+        &__radios {
+            width: 100%;
+            padding: 0 20px;
+            align-items: center;
+            flex-direction: row;
+            text-align: start;
+            margin-bottom: 30px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            @include mini-tablet-scr {
+                padding: 0;
+            }
+
+            &-title {
+                width: 30%;
+                font-size: 18px;
+                font-weight: $normal;
+                color: $black;
+                padding: 0;
+                @include computer-scr {
+                    width: 25%;
+                }
+                @include tablet-scr {
+                    width: 30%;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &-wrapper {
+                flex-wrap: wrap;
+                width: 60%;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                @include computer-scr {
+                    width: 70%;
+                }
+                @include tablet-scr {
+                    width: 50%;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                }
+            }
+
+            &-item {
+                width: 25%;
+                justify-content: flex-start;
+                font-size: 18px;
+                font-weight: $normal;
+                @include tablet-scr {
+                    width: 50%;
+                }
+                @include mini-tablet-scr {
+                    width: 33%;
+                }
+                @include mobile-scr {
+                    width: 48%;
+                }
+
+                &__radio {
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 50%;
+
+                    &::after {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        &__inputs {
+            &-wrapper {
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: space-between;
+                @include mini-tablet-scr {
+                    justify-content: center;
+                }
+            }
+
+            &-item {
+                width: 49%;
+                @include mini-tablet-scr {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__button {
+            margin-top: 20px;
+            justify-content: flex-end;
+            @include mini-tablet-scr {
+                justify-content: center;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.card-result-wrapper {
+    width: 100%;
+    display: flex;
+    @extend %flexCenter;
+    min-height: 430px;
+
+    &__wide {
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        @include computer-scr {
+            flex-direction: column;
+        }
+    }
+}

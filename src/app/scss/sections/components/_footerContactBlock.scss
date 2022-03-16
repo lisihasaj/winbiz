@@ -1,0 +1,57 @@
+.contact-block {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    padding: 85px 0 95px 0;
+    @extend %flexColumnCenterStart;
+    text-align: center;
+    @include mini-tablet-scr {
+        padding: 60px 0;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: $bold;
+        color: $white;
+        margin-bottom: 60px;
+        @include mini-tablet-scr {
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__phone-number {
+        font-size: 75px;
+        font-weight: $bold;
+        color: $white;
+        margin-bottom: 30px;
+        text-decoration: none;
+        @include tablet-scr {
+            font-size: 65px;
+        }
+        @include mini-tablet-scr {
+            font-size: 50px;
+        }
+        @include mobile-scr {
+            font-size: 42px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: $normal;
+        line-height: 25px;
+        color: $tagBody;
+        margin-bottom: 35px;
+        width: 465px;
+        @include mini-tablet-scr {
+            font-size: 18px;
+        }
+        @include mobile-scr {
+            width: 300px;
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+}

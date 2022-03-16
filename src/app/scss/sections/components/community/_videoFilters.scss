@@ -1,0 +1,143 @@
+.video{
+    &-filters {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        @include mobile-scr {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &-sorters-wrapper {
+        width: 60%;
+        height: auto;
+        flex-direction: row;
+        align-items: flex-start;
+        @include computer-scr {
+            flex-wrap: wrap;
+        }
+        @include mini-tablet-scr {
+            width: 49%;
+        }
+        @include mobile-scr {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .video-sorter {
+            margin-right: 15px;
+            @include computer-scr {
+                width: 48%;
+                margin-bottom: 30px;
+            }
+            @include mini-tablet-scr {
+                width: 100%;
+            }
+            @include mobile-scr {
+                margin-right: 0;
+            }
+        }
+
+        :nth-child(2) {
+            .select-label {
+                @include mini-tablet-scr {
+                    display: none;
+                }
+            }
+        }
+
+        :nth-child(3),
+        :nth-child(4) {
+            .select-label {
+                @include computer-scr {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-searcher-wrapper {
+        width: 40%;
+        height: auto;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @include computer-scr {
+            align-items: flex-start;
+        }
+        @include mini-tablet-scr {
+            width: 49%;
+        }
+        @include mobile-scr {
+            width: 100%;
+        }
+
+        .search {
+            &-container {
+                width: 50%;
+                height: 100%;
+                @include lg-computer-scr {
+                    width: 60%;
+                }
+                @include computer-scr {
+                    height: fit-content;
+                    width: 70%;
+                    padding-top: 25px;
+                }
+                @include tablet-scr {
+                    width: 80%;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                }
+            }
+
+            &-box {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 6px 0;
+                border-radius: 9px;
+                background-color: #EAEAEA;
+                box-shadow: $smoothShadow;
+
+                &::before {
+                    content: '\e808';
+                    font-family: 'fontello';
+                    position: absolute;
+                    left: 10px;
+                    bottom: 9px;
+                    font-size: 16px;
+                    color: $tagText;
+                    @include xl-computer-scr {
+                        left: 12px;
+                    }
+                    @include tablet-scr {
+                        left: 2.2vw;
+                    }
+                }
+
+                input {
+                    width: 90%;
+                    border-left: 1px solid $tagText;
+                    border-top: none;
+                    border-bottom: none;
+                    border-right: none;
+                    height: 100%;
+                    padding: 3px 10px 0 10px;
+                    background: transparent;
+                    @include xl-computer-scr {
+                        width: 86%;
+                    }
+                    @include tablet-scr {
+                        width: 82%;
+                    }
+                    @include mobile-scr {
+                        width: 92%;
+                    }
+                }
+            }
+        }
+    }
+}

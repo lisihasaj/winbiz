@@ -1,0 +1,569 @@
+@import '~vue-select/dist/vue-select.css';
+
+.checkbox-ex {
+    @extend %flexRowStartStart;
+
+    &__label-wrapper {
+        text-align: start;
+        margin-left: 20px;
+    }
+
+    &__label {
+        font-size: 20px;
+        font-weight: $medium;
+        color: $black;
+        text-transform: uppercase;
+        text-align: start;
+        margin-top: 8px;
+    }
+
+    &__description {
+        font-size: 15px;
+        font-weight: $normal;
+        line-height: 18px;
+        color: $tagText;
+        margin-top: 8px;
+    }
+
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__toggle {
+        min-height: 28px;
+        min-width: 52px;
+        border-radius: 16px !important;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        border: 1px solid $brandColor;
+        background-color: $white;
+        transition: all .2s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid $brandColor;
+            box-shadow: 3px 0 5px rgba($color: #000000, $alpha: 0.1);
+            transition: all .2s cubic-bezier(.5,.1,.75,1.35);
+        }
+            
+        &:checked {
+            border-color: $brandColor;
+            background-color: $brandColor;
+
+            &:after {
+                transform: translatex(25px);
+            }
+            
+        }
+    }
+}
+
+.checkbox {
+    @extend %flexRowStartCenter;
+
+    &__label {
+        font-size: 20px;
+        font-weight: $medium;
+        color: $black;
+        text-transform: uppercase;
+        text-align: start;
+        margin-left: 20px;
+        margin-top: 4px;
+    }
+
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__toggle {
+        height: 28px;
+        width: 52px;
+        border-radius: 16px !important;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        border: 1px solid $brandColor;
+        background-color: $white;
+        transition: all .2s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid $brandColor;
+            box-shadow: 3px 0 5px rgba($color: #000000, $alpha: 0.1);
+            transition: all .2s cubic-bezier(.5,.1,.75,1.35);
+        }
+            
+        &:checked {
+            border-color: $brandColor;
+            background-color: $brandColor;
+
+            &:after {
+                transform: translatex(25px);
+            }
+            
+        }
+    }
+}
+
+.form-select {
+    &__container {
+        width: 49%;
+        @extend %flexColumnStartStart;
+        @include mini-tablet-scr {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        @include mobile-scr {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 7px;
+        margin-left: 15px;
+        font-size: 17px;
+        font-weight: $medium;
+        color: $black;
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        height: 45px;
+        border-radius: 14px;
+        background-color: #EAEAEA;
+
+        &::after {
+            content: '\e803';
+            font-family: 'fontello';
+            position: absolute;
+            right: 15px;
+            bottom: 13px;
+            font-size: 16px;
+            color: $tagText;
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            padding: 10px 15px;
+            background: transparent;
+            border: none;
+        }
+    }
+
+    &__error {
+        font-size: 12px;
+        color: red;
+        font-weight: $normal;
+        margin: 5px 0 0 15px;
+        text-align: start;
+    }
+}
+
+.sorter-select {
+    &__container {
+        width: 24%;
+        @extend %flexColumnStartStart;
+    }
+
+    &__label {
+        margin-bottom: 7px;
+        margin-left: 7px;
+        font-size: 17px;
+        font-weight: $medium;
+        color: $black;
+    }
+
+    &__box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 9px;
+        background-color: #EAEAEA;
+        box-shadow: $smoothShadow;
+
+        &::after {
+            content: '\e803';
+            font-family: 'fontello';
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            font-size: 16px;
+            color: $tagText;
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            padding: 10px 15px;
+            background: transparent;
+            border: none;
+        }
+    }
+}
+
+.input {
+    @extend %flexColumnStartStart;
+    width: 49%;
+    margin-bottom: 25px;
+    @include mini-tablet-scr {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    @include mobile-scr {
+        margin-bottom: 35px;
+    }
+    
+    label {
+        font-size: 18px;
+        font-weight: $normal;
+        color: $black;
+        margin-bottom: 7px;
+        margin-left: 15px;
+    }
+
+    &-box {
+        width: 100%;
+        height: 45px;
+        background-color: $tagBody;
+        border-radius: 14px;
+
+        input {
+            width: inherit;
+            height: inherit;
+            border: none;
+            background: transparent;
+            padding: 10px 15px;
+        }
+
+        input::placeholder {
+            color: $tagText !important;
+            font-family: 'campton';
+            font-size: 14px;
+            font-weight: $normal;
+            @include tablet-scr {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-error {
+        font-size: 12px;
+        color: red;
+        font-weight: $normal;
+        margin: 5px 0 0 15px;
+        text-align: start;
+    }
+}
+
+.file-input {
+    @extend %flexColumnStartStart;
+    width: 49%;
+    margin-bottom: 0px;
+    margin-bottom: 25px;
+    @include mini-tablet-scr {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    @include mobile-scr {
+        margin-bottom: 35px;
+    }
+    
+    .label {
+        font-size: 18px;
+        font-weight: $normal;
+        color: $black;
+        margin-bottom: 7px;
+        margin-left: 15px;
+    }
+
+    &-box {
+        width: 100%;
+        height: 45px;
+        background-color: $tagBody;
+        border-radius: 14px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        cursor: pointer;
+
+        input {
+            opacity: 0;
+            width: 0.1px;
+            height: 0.1px;
+            position: absolute;
+        }
+
+        &:hover {
+            .file-input-icon {
+                color: $brandColor;
+            }
+        }
+    }
+
+    &-icon {
+        position: relative;
+        font-size: 22px;
+        height: 100%;
+        width: 50px;
+        @extend %flexCenter;
+        color: $tagText;
+        line-height: 0px;
+        padding-bottom: 3px;
+        transition: all 0.2s ease;
+    }
+
+    &-expression {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 15px;
+        font-size: 14px;
+        color: $tagText;
+        font-weight: $normal;
+        text-align: start;
+        width: auto;
+        height: 70%;
+        margin: 0;
+        border-left: 1px solid $tagText;
+    }
+
+    &-error {
+        font-size: 12px;
+        color: red;
+        font-weight: $normal;
+        margin: 5px 0 0 15px;
+        text-align: start;
+    }
+}
+
+.textarea {
+    @extend %flexColumnStartCenter;
+    width: 100%;
+    margin-bottom: 25px;
+    @include mini-tablet-scr {
+        margin-bottom: 30px;
+    }
+    @include mobile-scr {
+        margin-bottom: 35px;
+    }
+    
+    label {
+        font-size: 18px;
+        text-align: start;
+        font-weight: $normal;
+        color: $black;
+        margin-bottom: 7px;
+        margin-left: 15px;
+    }
+
+    &-box {
+        width: 100%;
+        height: fit-content;
+        background-color: $tagBody;
+        border-radius: 14px;
+
+        textarea {
+            width: inherit;
+            height: inherit;
+            border: none;
+            background: transparent;
+            padding: 10px 15px;
+        }
+
+        textarea::placeholder {
+            color: $tagText !important;
+            font-family: 'campton';
+            font-size: 14px;
+            font-weight: $normal;
+            @include tablet-scr {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-error {
+        font-size: 12px;
+        color: red;
+        font-weight: $normal;
+        margin: 5px 0 0 15px;
+        text-align: start;
+    }
+}
+
+.radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: $normal;
+    user-select: none;
+    cursor: pointer !important;
+    color: $black;
+    margin: 5px 0;
+    transition: color 0.2s ease;
+
+    &__input {
+        display: none;
+    }
+
+    .label {
+        cursor: pointer;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    &__radio {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $tagText;
+        border-radius: 17px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        padding: 2px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            content: '';
+            width: 12px;
+            height: 12px;
+            display: block;
+            background-color: $brandColor;
+            border-radius: 13px;
+            transform: scale(0);
+            transition: transform 0.2s ease;
+        }
+    }
+
+    &__input:checked + &__radio::after {
+        transform: scale(1);
+    }
+
+    &:hover {
+        color: $brandColor;
+    }
+
+    &-error {
+        font-size: 12px;
+        color: red;
+        font-weight: $normal;
+        margin: 5px 0 0 15px;
+        text-align: start;
+    }
+}
+
+.v-select {
+    font-size: 14px;
+    .vs__dropdown-toggle {
+        border-color: transparent;
+        background-color: #e8e8e8;
+        padding: 12px 14px;
+        border-radius: 14px;
+        max-height: 100px;
+    }
+
+    .vs__search {
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        &:focus {
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+        &::placeholder {
+            font-family: $defaultFont;
+        }
+    }
+
+    .vs__dropdown-option--selected,
+    .vs__dropdown-option--highlight {
+        background-color: $brandColor;
+        color: #fff;
+    }
+
+    .vs__selected-options {
+        padding: 0;
+        position: relative;
+        z-index: 0;
+
+        input {
+            position: absolute;
+        }
+    }
+
+    .vs__actions {
+        position: relative;
+        z-index: 3;
+        cursor: pointer;
+
+        .vs__clear {
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: -8px;
+            margin: auto;
+            max-height: 23px;
+        }
+    }
+
+    .vs__spinner {
+        width: 14px;
+        height: 14px;
+        border-width: 2px;
+    }
+
+    .vs__selected {
+        margin: 0;
+        line-height: 1;
+        padding: 0;
+        z-index: 2;
+    }
+
+    .vs__dropdown-menu {
+        max-height: 130px;
+    }
+}

@@ -1,0 +1,98 @@
+.subsection-body {
+    &__content {
+        width: 100%;
+        height: auto;
+    }
+
+    &__wrapper {
+        border-top: solid 1px $textOnDark30;
+        border-bottom: solid 1px $textOnDark30;
+        padding: 65px 0 55px 0;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @include lg-computer-scr {
+            justify-content: space-around;
+        }
+
+        .text {
+            text-align: start;
+            @include tablet-scr {
+                margin-bottom: 60px;
+            }
+
+            h2 {
+                font-size: 30px;
+                font-weight: $bold;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $black;
+                font-size: 18px;
+                font-weight: $light;
+                line-height: 24px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+
+                a {
+                    width: fit-content;
+                    text-decoration: none;
+                    color: $brandColor;
+                    font-size: 15px;
+                    font-weight: $medium;
+                }
+            }
+        }
+
+        .faq-page {
+            height: 320px;
+            padding: 60px 0;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 18px;
+            box-shadow: $smoothShadow;
+            background-color: $tagBody;
+            transition: all 0.2s ease;
+            @include xl-computer-scr {
+                padding: 50px 0;
+            }
+
+            .icon {
+                width: 90px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                color: $black;
+                font-size: 20px;
+                width: 70%;
+                font-weight: $medium;
+                margin-bottom: 23px;
+            }
+
+            .route {
+                position: relative;
+                font-size: 15px;
+                color: $brandColor;
+                font-weight: $medium;
+                overflow: hidden;
+                transition: all 0.2s ease-in-out;
+            }
+
+            &:hover,
+            &:focus {
+                transform: scale(1.03);
+
+                .route {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+}

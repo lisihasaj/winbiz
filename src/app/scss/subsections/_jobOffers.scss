@@ -1,0 +1,232 @@
+.job-offers {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+
+    &__content {
+        width: 100%;
+        height: auto;
+        background-color: $white;
+
+        &-container {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            @include mini-tablet-scr {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+
+        &-wrapper {
+            .date {
+                width: 100%;
+                text-align: start;
+                font-size: 16px;
+                font-weight: $normal;
+                color: $tagText;
+                margin-bottom: 15px;
+            }
+
+            .text {
+                padding-top: 55px;
+                border-top: 1px solid $tagBody;
+                border-bottom: 1px solid $tagBody;
+                width: 100%;
+                text-align: start;
+                @include mini-tablet-scr {
+                    padding-top: 35px;
+                }
+
+                h1,h2 {
+                    text-align: center;
+                    font-size: 35px;
+                    font-weight: $bold;
+                    color: $brandColor;
+                    margin-bottom: 30px;
+                }
+
+                p,h4,h5,h6,li {
+                    font-size: 18px;
+                    color: $tagText;
+                    line-height: 22px;
+                }
+
+                h4,h5,h6,strong {
+                    font-weight: $bold;
+                }
+
+                h4,h5,h6 {
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-weight: $normal;
+                }
+
+                p,ul {
+                    margin-bottom: 40px;
+                    @include mini-tablet-scr {
+                        margin-bottom: 25px;
+                    }
+                }
+
+                ul {
+                    li {
+                        position: relative;
+                        padding-left: 15px;
+                        font-weight: $normal;
+
+                        &::before {
+                            content: '\e801';
+                            position: absolute;
+                            font-family: 'fontello';
+                            top: -3px;
+                            left: 0;
+                            bottom: 0;
+                            margin: auto;
+                            color: inherit;
+                            font-size: inherit;
+                        }
+                    }
+                }
+            }
+
+            .confirmation {
+                width: 100%;
+                text-align: center;
+                padding: 35px 0;
+
+                p {
+                    font-size: 20px;
+                    font-weight: $medium;
+                    color: $tagText;
+                    margin-bottom: 15px;
+                }
+
+                &__buttons {
+                    width: 450px;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    @include mini-tablet-scr {
+                        flex-wrap: wrap;
+                    }
+                    @include mobile-scr {
+                        width: 100%;
+                    }
+
+                    .jobs-cta {
+                        @include mobile-scr {
+                            margin: 10px 0;
+                        }
+                    }
+
+                    &-item {
+                        @include mobile-scr {
+                            margin: 7px;
+                        }
+                    }
+                }
+            }
+
+            .social-media {
+                width: 100%;
+                text-align: center;
+                padding: 35px 0;
+                border-top: 1px solid $tagBody;
+                @include mini-tablet-scr {
+                    padding-bottom: 0;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: $medium;
+                    color: $tagText;
+                    margin-bottom: 15px;
+                }
+
+                &__links {
+                    width: 170px;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    &-icon {
+                        cursor: pointer;
+                        i {
+                            color: $tagText;
+                            font-size: 24px;
+                            transition: color 0.2s ease;
+
+                            &:hover {
+                                color: $brandColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__end-note {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: $brandColor;
+
+        &-wrapper {
+            width: 100%;
+            padding: 75px 0;
+            @include computer-scr {
+                padding: 70px 0;
+            }
+            @include mini-tablet-scr {
+                padding: 60px 0;
+            }
+
+            .blue-text {
+                width: 70%;
+                text-align: center;
+                @include tablet-scr {
+                    width: 90%;
+                }
+
+                h1 {
+                    font-size: 40px;
+                    color: $white;
+                    font-weight: $bold;
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                    @include tablet-scr {
+                        font-size: 35px;
+                        margin-bottom: 30px;
+                    }
+                    @include mini-tablet-scr {
+                        font-size: 30px;
+                    }
+                }
+
+                h4 {
+                    font-size: 30px;
+                    font-weight: $bold;
+                    color: $white;
+                    margin-bottom: 15px;
+                    @include tablet-scr {
+                        font-size: 28px;
+                    }
+                    @include mini-tablet-scr {
+                        font-size: 24px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: $medium;
+                    color: $white;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}

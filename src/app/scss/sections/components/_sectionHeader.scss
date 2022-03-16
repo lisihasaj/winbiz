@@ -1,0 +1,143 @@
+.section-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 850px;
+    @extend %coverCenter;
+    z-index: 0 !important;
+    @include computer-scr {
+        height: 870px;
+    }
+    @include mobile-scr {
+        height: 780px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $black, $alpha: 0.3);
+        z-index: 1;
+    }
+
+    .header {
+        &-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        &-content {
+            width: 100%;
+            height: 60%;
+            z-index: 3;
+            @include mobile-scr {
+                height: 65%;
+            }
+
+            &__title {
+                text-align: center;
+                width: 80%;
+                @include xl-computer-scr {
+                    width: 80%;
+                }
+                @include tablet-scr {
+                    width: 85%;
+                }
+                @include mobile-scr {
+                    width: 95%;
+                }
+
+                h1 {
+                    color: $white;
+                    font-weight: $bold;
+                    width: 100%;
+                    font-size: 6.8vh;
+                    line-height: 115%;
+                    text-align: center;
+                    margin-bottom: 1.85vh;
+                    @include xl-computer-scr {
+                        font-size: 55px;
+                        line-height: 61px;
+                    }
+                    @include computer-scr {
+                        font-size: 45px;
+                        line-height: 51px;
+                    }
+                    @include tablet-scr {
+                        font-size: 35px;
+                        line-height: 39px;                        
+                    }
+                    @include mobile-scr {
+                        margin-bottom: 3.85vh;
+                    }
+                }
+
+                p {
+                    color: $white;
+                    font-size: 20px;
+                    width: 80%;
+                    font-weight: $medium;
+                    line-height: 25px;
+                    margin-bottom: 50px;
+                    @include computer-scr {
+                        width: 75%;
+                        line-height: 22px;
+                    }
+                    @include tablet-scr {
+                        font-size: 18px;
+                    }
+                    @include mobile-scr {
+                        width: 95%;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            &__buttons {
+                width: 380px;
+                height: auto;
+                margin-bottom: 5.5vh;
+                @include mini-tablet-scr {
+                    width: 345px;
+                    flex-wrap: wrap;
+                }
+                @include mobile-scr {
+                    width: 320px
+                }
+
+                .branded-cta {
+                    @extend %ctaBranded;
+                    @include mobile-scr {
+                        margin-bottom: 15px
+                    }
+                }
+
+                .white-cta {
+                    @extend %ctaWhite;
+                    @include mobile-scr {
+                        margin-bottom: 15px
+                    }
+                }
+
+                .outlined-cta {
+                    @extend %ctaOutlined;
+                    @include mobile-scr {
+                        margin-bottom: 15px
+                    }
+                }
+            }
+        }
+
+        &-search {
+            z-index: 3;
+            max-height: fit-content;
+        }
+    }
+}

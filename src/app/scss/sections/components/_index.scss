@@ -1,0 +1,47 @@
+//LogoMeta
+@import './logoMeta';
+
+//Home page styling
+@import './home/index';
+
+//Product page styling
+@import './product/index';
+
+//Support page styling
+@import './support/index';
+
+//Community page styling
+@import './community/index';
+
+//WinBiz page styling
+@import './winbiz/index';
+
+//Formations page styling
+@import './trainings/index';
+
+//Contact page styling
+@import './contact/index';
+
+//WinbizLocal page styling
+@import './winbizLocal/index';
+
+
+//Shared components styling
+@import './productBlock';
+@import './downloadAppBlock';
+@import './winbizPlusOptions';
+@import './footerContactBlock';
+@import './scrollDown';
+@import './search';
+@import './formationsBlock';
+@import './sectionHeader';
+@import './subsectionHeader';
+@import './subsectionBody';
+@import './formCompletitionMessage';
+@import './splashPage';
+@import './loadingComponent';
+@import './freeTestForm';
+@import './mapBlock';
+@import './troubleshootingMsg';
+@import './downloadAppButtons';
+@import './cookiesBanner';

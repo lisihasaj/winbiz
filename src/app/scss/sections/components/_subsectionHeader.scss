@@ -1,0 +1,62 @@
+.header {
+    width: 100% !important;
+    height: 480px;
+
+    &-content {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 50%;
+        @include tablet-scr {
+            height: 60%;
+        }
+
+        &.modified {
+            height: 40%;
+            
+            .ss-cta {
+                display: none;
+            }
+
+            .header-return {
+                display: none;
+            }
+        }
+    }
+
+    &-intro {
+        margin-bottom: 25px;
+        width: 60%;
+        @include computer-scr {
+            width: 90%;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 40px;
+            font-weight: $bold;
+            text-transform: uppercase;
+            color: $black;
+            @include mini-tablet-scr {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: $medium;
+            color: $black;
+        }
+    }
+
+    &-return {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 40px;
+        width: 100%;
+    }
+}

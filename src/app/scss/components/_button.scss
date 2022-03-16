@@ -1,0 +1,83 @@
+.default-button {
+    border: none;
+    padding: 13px 30px 9px 30px;
+    border-radius: 30px;
+    vertical-align: middle;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    @extend %semiBoldFont;
+    @include mini-tablet-scr {
+        padding: 8px 20px 4px 20px;
+    }
+    @include mini-tablet-scr {
+        font-size: 20px;
+        padding: 10px 25px 5px 25px;
+    }
+
+    &:hover {
+        box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.4);
+    }
+}
+
+.wb-btn {
+    @extend .default-button;
+    @include mobile-scr {
+        margin-bottom: 5px;
+    }
+
+    &--branded {
+        @extend .default-button;
+        background-color: $brandColor;
+        box-shadow: $smoothShadow;
+        color: #fff;
+        border: none !important;
+        &:hover {
+            background-color: lighten($brandColor, 10%);
+        }
+    }
+
+    &--grey {
+        @extend .default-button;
+        background-color: rgba($color: #AEAEAE, $alpha: 0.6);
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        font-size: 13px;
+        color: $white;
+        @include mobile-scr {
+            margin-bottom: 5px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color: #AEAEAE, $alpha: 1);
+        }
+    }
+}
+
+.cta {
+    @extend %ctaBranded;
+}
+
+.branded-outline {
+    @extend %ctaBrandedOutline;
+}
+
+.back-btn {
+    width: fit-content;
+    text-decoration: none;
+    color: $brandColor;
+    font-size: 15px;
+    font-weight: $medium;
+    @extend %flexRowStartCenter;
+
+    .arrow {
+        font-size: 15px;
+        margin-right: 10px;
+
+        &::before {
+            margin: 0;
+        }
+    }
+}
+

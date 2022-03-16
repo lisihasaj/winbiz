@@ -1,0 +1,135 @@
+.active-audio {
+    &-container {
+        width: 100%;
+        padding-bottom: 45px;
+        border-bottom: 1px solid $tagBody;
+        margin-bottom: 25px;
+        @include mobile-scr {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        font-size: 20px;
+        font-weight: $medium;
+        text-transform: uppercase;
+        color: $brandColor;
+        margin-bottom: 25px;
+    }
+
+    &__item {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        @include tablet-scr {
+            flex-direction: column;
+        }
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            margin-right: 40px;
+            border: 12px solid $brandColor;
+            max-width: 290px;
+            max-height: 290px;
+            box-shadow: $smoothShadow;
+            background-color: $brandColor;
+            @include tablet-scr {
+                margin-bottom: 40px;
+                margin-right: 0;
+            }
+
+            .icon {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .image {
+                height: 320px;
+                width: auto;
+                margin-top: auto;
+            }
+        }
+
+        .audio {
+            width: 70%;
+            @include tablet-scr {
+                width: 90%;
+            }
+            @include mini-tablet-scr {
+                width: 100%;
+            }
+
+            &__play {
+                font-size: 90px;
+                margin-left: -25px;
+                margin-bottom: 15px;
+                line-height: 0;
+                color: $brandColor;
+                @include mobile-scr {
+                    font-size: 80px;
+                    margin-left: -20px;
+                }
+            }
+
+            &__title-wrapper {
+                margin-bottom: 20px;
+
+                .date {
+                    padding: 10px 15px;
+                    border-radius: 7px;
+                    width: fit-content;
+                    background-color: $tagBody;
+                    color: $tagText;
+                    font-size: 12px;
+                    font-weight: $normal;
+                    margin-bottom: 15px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: $medium;
+                    color: $black;
+                }
+            }
+
+            &__progress-bar {
+                height: 125px;
+                width: 100%;
+                background-color: $tagBody;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+
+            &__tags-wrapper {
+                margin-left: 5vw;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                @include mobile-scr {
+                    margin-left: 0;
+                    flex-wrap: wrap;
+                }
+
+                .tag {
+                    padding: 10px 15px;
+                    border-radius: 7px;
+                    width: fit-content;
+                    text-transform: uppercase;
+                    background-color: $tagBody;
+                    color: $tagText;
+                    font-size: 12px;
+                    font-weight: $normal;
+                    margin-right: 10px;
+                    @include mobile-scr {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

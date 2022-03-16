@@ -1,0 +1,78 @@
+.form-message {
+    &-wrapper {
+        width: 100%;
+    }
+
+    &__box {
+        height: auto;
+        padding: 55px 0 50px 0;
+        background-color: $tagBody;
+        box-shadow: $smoothShadow;
+        border-radius: 18px;
+        margin-bottom: 80px;
+        @include tablet-scr {
+            padding: 50px;
+        }
+        @include mini-tablet-scr {
+            margin-bottom: 55px;
+        }
+    
+        .back-btn {
+            width: fit-content;
+            position: relative;
+            color: $brandColor;
+            text-decoration: none;
+            padding-left: 30px;
+            font-size: 15px;
+            font-weight: $medium;
+            @extend %flexRowStartCenter;
+    
+            &::before {
+                content: '\e800';
+                position: absolute;
+                font-family: 'fontello';
+                top: -3px;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                color: $brandColor;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__text {
+        @include tablet-scr {
+            width: 70%;
+        }
+        h1 {
+            font-size: 25px;
+            font-weight: $bold;
+            color: $brandColor;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: $normal;
+            color: $black;
+            line-height: 30px;
+            width: 55%;
+            margin-bottom: 30px;
+            @include tablet-scr {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.message-enter-active,
+.message-leave-active {
+  transition: opacity 0.3s ease-in;
+}
+
+.message-enter,
+.message-leave-active {
+  opacity: 0;
+}

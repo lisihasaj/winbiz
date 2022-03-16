@@ -1,0 +1,56 @@
+.video-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(#000, 0.8);
+	@extend %flexCenter;
+	z-index: 99;
+	transition: all 0.3s;
+	&__inner {
+		position: relative;
+		width: 90%;
+		height: 90%;
+		box-sizing: border-box;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		font-size: 16px;
+		color: #fff;
+	}
+
+	&__video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80%;
+		height: 70%;
+        transform: translate(-50%, -50%);
+		@include xl-computer-scr {
+			width: 90%;
+			height: 65%;
+		}
+		@include lg-computer-scr {
+			height: 60%;
+		}
+		@include computer-scr {
+			height: 55%;
+		}
+		@include tablet-scr {
+			width: 100%;
+			height: 45%;
+		}
+		@include mini-tablet-scr {
+			width: 100%;
+			height: 35%;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+.twitter-feed {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+    background-color: $tagBody;
+    z-index: 5;
+    @include tablet-scr {
+        padding: 60px 0;
+        height: auto;
+    }
+
+    &__container {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet-scr {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &__title {
+        &-wrapper {
+            width: 35%;
+            height: 800px;
+            align-items: flex-start;
+            justify-content: center;
+            @include tablet-scr {
+                width: 70%;
+                height: auto;
+                margin-bottom: 40px;
+                align-items: center;
+            }
+            @include mini-tablet-scr {
+                width: 90%;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            height: 100%;
+            text-align: start;
+            height: fit-content;
+            @include tablet-scr {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 48px;
+                font-weight: $bold;
+                color: $black;
+                margin-bottom: 15px;
+                @include tablet-scr {
+                    font-size: 30px;
+                }
+            }
+        
+            p {
+                font-size: 12px;
+                font-weight: $normal;
+                line-height: 17px;
+                color: $tagText;
+                margin-bottom: 30px
+            }
+        }
+
+        &-cta {
+            @extend %ctaBranded;
+        }
+    }
+    
+    &__tweets {
+        width: 60%;
+        height: 800px;
+        overflow: auto;
+        border-radius: 18px;
+        box-shadow: $smoothShadow;
+        @include tablet-scr {
+            width: 90%;
+            height: 560px;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &-container {
+            width: 100%;
+            height: auto;
+
+            .twitter {
+                width: 100%;
+            }
+        }
+    }
+}

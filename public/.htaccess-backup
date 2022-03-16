@@ -1,0 +1,603 @@
+<IfModule mod_headers.c>
+    RequestHeader set X-Prerender-Token "Tzp4UFzGaXk0M2o5Pv70"
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+    
+    RewriteEngine on
+	RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^winbiz.ch [NC]
+	RewriteRule (.*) https://www.winbiz.ch/$1 [R=302,L]
+
+    RewriteEngine On
+    Redirect /it-ch/programma-gestione-impresa/scoprite-i-packs-entreprise-winbiz/confronto-dettagliato-delle-edizioni-di-winbiz-cloud https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking/elenco-degli-istituti-finanziari-compatibili-con-winbiz https://www.winbiz.ch/it/prodotto
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/list-of-winbiz-compatible-financial-institutions https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/discover-winbiz-enterprise-packs/detailed-comparison-of-winbiz-cloud-editions https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-ubs-connecting-with-e-banking https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-bcv-connecting-with-e-banking https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-bcf-connecting-with-e-banking https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/winbiz-erweiterungen-entdecken/grundstueckverwaltung https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen/winbiz-local-und-andere-komponenten-herunterladen https://www.winbiz.ch/de/unterstutzung
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/estensioni-winbiz/gestione-di-fotocopiatrici https://www.winbiz.ch/it/prodotto
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking/liste-der-winbiz-kompatiblen-finanzinstitute https://www.winbiz.ch/de/produkt
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger/telechargements-additionnels-winbiz-locale https://www.winbiz.ch/fr/support/telechargements
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/winbiz-erweiterungen-entdecken/schnittstelle-tomas https://www.winbiz.ch/de/produkt
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking/winbiz-e-ubs-connettersi-con-le-banking https://www.winbiz.ch/it/prodotto
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/winbiz-erweiterungen-entdecken/kopiererverwaltung https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/winbiz-erweiterungen-entdecken/gebaeudeverwaltung https://www.winbiz.ch/de/produkt
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/estensioni-winbiz/gestione-delle-parcelle https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/estensioni-winbiz/distributori-automatici https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking/winbiz-e-bcf-collegarsi-con-le-banking https://www.winbiz.ch/it/prodotto
+    Redirect /en/enterprise-management-software/discover-winbiz-modules/sales-purchase-stock-management/e-facture https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking/winbiz-und-ubs-verbindung-mit-e-banking https://www.winbiz.ch/de/produkt
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download/scarica-winbiz-locale-e-altri-componenti https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/estensioni-winbiz/opzione-di-immobili https://www.winbiz.ch/it/prodotto
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/winbiz-erweiterungen-entdecken/tankautomaten https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen/zusaetzliche-downloads-fuer-winbiz-local https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /it-ch/programma-gestione-impresa/scoprite-moduli-winbiz/winbiz-commercio/fatture-elettroniche https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/estensioni-winbiz/interfaccia-tomas https://www.winbiz.ch/it/prodotto
+    Redirect /de-ch/verwaltungsprogramm/winbiz-module-entdecken/verwaltung-verkauf-einkauf-lager/e-rechnung https://www.winbiz.ch/de/produkt
+    Redirect /en/services/winbiz-support-and-updates/download/download-winbiz-local-and-other-components https://www.winbiz.ch/en/support/downloads
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/extensions/building-management https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/discover-winbiz-modules/sales-purchase-stock-management https://www.winbiz.ch/en/product
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download/altri-download-per-winbiz-locale https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/programma-gestione-impresa/scoprite-i-packs-entreprise-winbiz/confronto-sintetico https://www.winbiz.ch/it/prodotto
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/extensions/parcel-management https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/extensions/copier-management https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/winbiz-enterprise-packs-entdecken/zusammenfassender-vergleich https://www.winbiz.ch/de/produkt
+    Redirect /en/services/winbiz-training-sessions/winbiz-specialist/winbiz-specialist-certification https://www.winbiz.ch/en/trainings/winbiz-specialist/winbiz-specialist-course
+    Redirect /en/enterprise-management-software/discover-winbiz-enterprise-packs/summary-comparative https://www.winbiz.ch/en/product
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archives-2018 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archives-2017 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /en/services/winbiz-support-and-updates/download/additional-downloads-for-winbiz-local https://www.winbiz.ch/en/support/downloads
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/extensions/tomas-interface https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/extensions/petrol-machines https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-postfinance https://www.winbiz.ch/en/product
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger/telecharger-winbiz-locale https://www.winbiz.ch/fr/support/telechargements
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2020 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2019 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2018 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2017 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2016 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2015 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2014 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2013 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2012 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions/archives-2011 https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2020 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2019 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2016 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2015 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2014 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2013 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2012 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni/archivi-2011 https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-raiffeisen https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-raiffeisen https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/winbiz-enterprise-packs-entdecken/detaillierter-vergleich https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/extensions/gestion-des-parcelles https://www.winbiz.ch/fr/produit
+    Redirect /de-ch/verwaltungsprogramm/winbiz-module-entdecken/verwaltung-verkauf-einkauf-lager https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/verwaltung-stunden-aktivitaeten https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-schulungen/winbiz-specialist/winbiz-specialist-zertifizierung https://www.winbiz.ch/de/trainings/winbiz-specialist/schulung-winbiz-specialist
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/extensions/gestion-des-copieurs https://www.winbiz.ch/fr/produit
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/winbiz-erweiterungen-entdecken https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/extensions/automates-a-essence https://www.winbiz.ch/fr/produit
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger/winbiz-cloud-android https://www.winbiz.ch/fr/support/telechargements
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/gestione-ore-attivita https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/winbiz-specialist/winbiz-specialist-course https://www.winbiz.ch/en/trainings/winbiz-specialist/winbiz-specialist-course
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/winbiz-cash-register https://www.winbiz.ch/en/product
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/extensions/gestion-immeubles https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/decouvrez-modules-winbiz/winbiz-commerce/e-facture https://www.winbiz.ch/fr/produit
+    Redirect /en/services/winbiz-training-sessions/downloads-of-exercises-for-winbiz-courses https://www.winbiz.ch/en/community
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-bcvs https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking/winbiz-and-bcvs https://www.winbiz.ch/en/product
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/instituts-financiers https://www.winbiz.ch/fr/produit
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2020 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2018 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2017 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2016 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2015 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2014 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2013 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2012 https://www.winbiz.ch/en/support/updates
+    Redirect /en/services/winbiz-support-and-updates/versions-history/versions-history-2011 https://www.winbiz.ch/en/support/updates
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger/winbiz-cloud-ipad https://www.winbiz.ch/fr/support/telechargements
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/extensions/interface-tomas https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/programma-gestione-impresa/soluzioni-professionali/personalizza-winbiz https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/scoprite-moduli-winbiz/gestione-contabilita https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/gestione-cassa-pos https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-support-and-updates/versions-history/version-history-2019 https://www.winbiz.ch/en/support/updates
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/parcel-management https://www.winbiz.ch/en/product
+    Redirect /de-ch/dienste/winbiz-schulungen/winbiz-specialist/schulung-winbiz-specialist https://www.winbiz.ch/de/trainings/winbiz-specialist/schulung-winbiz-specialist
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger/winbiz-cloud-mac https://www.winbiz.ch/fr/support/telechargements
+    Redirect /services-winbiz/formation/winbiz-specialist/certification-winbiz-specialist https://www.winbiz.ch/fr/formations/winbiz-specialist/cours-winbiz-specialist
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/winbiz-postfinance https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download/winbiz-cloud-android https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate/estensioni-winbiz https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/winbiz-accounting-course https://www.winbiz.ch/en/community
+    Redirect /en/enterprise-management-software/winbiz-for-fiduciary/fiduciaries-solution https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/discover-winbiz-modules/winbiz-accounting https://www.winbiz.ch/en/product
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger/winbiz-cloud-pc https://www.winbiz.ch/fr/support/telechargements
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/winbiz-raiffeisen https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking/winbiz-e-bcvs https://www.winbiz.ch/it/prodotto
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/winbiz-projects https://www.winbiz.ch/en/product
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen/winbiz-cloud-android https://www.winbiz.ch/de/unterstutzung
+    Redirect /it-ch/programma-gestione-impresa/soluzioni-professionali/my-post-business https://www.winbiz.ch/it/prodotto
+    Redirect /logiciel-gestion-entreprise/decouvrez-modules-winbiz/winbiz-comptabilite https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download/winbiz-cloud-ipad https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/programma-gestione-impresa/scoprite-moduli-winbiz/winbiz-commercio https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking/postfinance https://www.winbiz.ch/it/prodotto
+    Redirect /en/enterprise-management-software/discover-winbiz-modules/winbiz-payroll https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/winbiz-module-entdecken/verwaltung-buchhaltung https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/partner/marken-logos-und-grafikrichtlinien-von-winbiz-und-logicial https://www.winbiz.ch/de/winbiz-local
+    Redirect /de-ch/dienste/winbiz-schulungen/downloads-von-uebungen-fuer-winbiz-kurse https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/winbiz-pour-fiduciaires/solution-fiduciaire https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download/winbiz-cloud-mac https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/cronologia-delle-versioni https://www.winbiz.ch/it/supporto/aggiornamenti
+    Redirect /it-ch/servizi/corsi/winbiz-specialists/certificazione-winbiz-specialist https://www.winbiz.ch/it/trainings/winbiz-specialist/corso-winbiz-specialist
+    Redirect /it-ch/programma-gestione-impresa/scoprite-moduli-winbiz/gestione-salari https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking/raiffeisen https://www.winbiz.ch/it/prodotto
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack/verwaltung-kasse-pos https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen/winbiz-cloud-ipad https://www.winbiz.ch/de/unterstutzung
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/historique-des-versions https://www.winbiz.ch/fr/support/mises-a-jour
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download/winbiz-cloud-pc https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/programma-gestione-impresa/winbiz-fiduciari/soluzione-fiduciaria https://www.winbiz.ch/it/prodotto
+    Redirect /fr/logiciel-gestion-entreprise/gestion-vente-achat-stock/e-banking/bcn https://www.winbiz.ch/fr/produit
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen/winbiz-cloud-mac https://www.winbiz.ch/de/unterstutzung
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack/extensions https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/business-solutions/my-post-business https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/business-solutions/customise-winbiz https://www.winbiz.ch/en/product
+    Redirect /de/verwaltungsprogramm/verwaltung-verkauf-einkauf-lager/e-banking/wkb https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking/postfinance https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen/winbiz-cloud-pc https://www.winbiz.ch/de/unterstutzung
+    Redirect /logiciel-gestion-entreprise/edition-winbiz-cloud/comparatif-detaille https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/decouvrez-modules-winbiz/winbiz-salaires https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/decouvrez-modules-winbiz/winbiz-commerce https://www.winbiz.ch/fr/produit
+    Redirect /en/services/winbiz-support-and-updates/download/winbiz-cloud-android https://www.winbiz.ch/en/support/downloads
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking/raiffeisen https://www.winbiz.ch/de/produkt
+    Redirect /services-winbiz/formation/winbiz-specialist/cours-winbiz-specialist https://www.winbiz.ch/fr/formations/winbiz-specialist/cours-winbiz-specialist
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/winbiz-ubs https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/winbiz-bcv https://www.winbiz.ch/fr/produit
+    Redirect /en/partners/winbiz-and-logicial-brands-logos-and-graphic-guidelines https://www.winbiz.ch/en/winbiz-local
+    Redirect /en/enterprise-management-software/veoprint-winbizs-printing-partner https://www.winbiz.ch/en/product
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2020 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2019 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2018 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2017 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2016 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2015 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2014 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2013 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2012 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf/archiv-2011 https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-schulungen/bestellen-sie-unsere-kursunterlagen https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/solutions-metiers/personnalisez-winbiz https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/edition-winbiz-cloud/comparatif-resume https://www.winbiz.ch/fr/produit
+    Redirect /en/enterprise-management-software/discover-winbiz-enterprise-packs https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/veoprint-die-partnerdruckerei-von-winbiz https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/branchenloesungen/winbiz-personalisieren https://www.winbiz.ch/de/produkt
+    Redirect /en/services/winbiz-support-and-updates/download/winbiz-cloud-ipad https://www.winbiz.ch/en/support/downloads
+    Redirect /en/enterprise-management-software/sales-purchase-stock-management https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/winbiz-module-entdecken/verwaltung-lohn https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/winbiz-module-entdecken/verwaltung-lohn https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/winbiz-projets https://www.winbiz.ch/fr/produit
+    Redirect /en/services/winbiz-support-and-updates/download/winbiz-cloud-mac https://www.winbiz.ch/en/support/downloads
+    Redirect /en/enterprise-management-software/included-in-winbiz/sms-gateway https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/winbiz-treuhaender/treuhaender-loesung https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/winbiz-caisse https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/supporto-gratuito https://www.winbiz.ch/it/supporto
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/abbonamento-v-i-p https://www.winbiz.ch/it/supporto/supporto-vip
+    Redirect /en/services/winbiz-support-and-updates/download/winbiz-cloud-pc https://www.winbiz.ch/en/support/downloads
+    Redirect /en/logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/bcf https://www.winbiz.ch/en
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-commerce https://www.winbiz.ch/en/product
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/tele-assistance https://www.winbiz.ch/fr/support/tele-assistance
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/support-gratuit https://www.winbiz.ch/fr/support
+    Redirect /logiciel-gestion-entreprise/solutions-metiers/my-post-business https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/sms-gateway https://www.winbiz.ch/it/prodotto
+    Redirect /en/enterprise-management-software/included-in-winbiz/e-banking https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/enterprise-professional-pack https://www.winbiz.ch/en/product
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/abonnement-vip https://www.winbiz.ch/fr/support/assistance-vip
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/bcvs https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/bcvs https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/tele-assistenza https://www.winbiz.ch/it/supporto/tele-assistance
+    Redirect /it-ch/programma-gestione-impresa/provate-winbiz-gratuitamente https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-professional https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-commerce https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/accounting https://www.winbiz.ch/en/trainings/entrepreneurial-training/accounting
+    Redirect /en/enterprise-management-software/payeye-swiss-qr-code-reader https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking/wkb https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking/fkb https://www.winbiz.ch/de/produkt
+    Redirect /services-winbiz/formation/telecharger-exercices-cours-winbiz https://www.winbiz.ch/fr/communaute
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate/extensions https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/bcf https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking/bcf https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz/e-banking https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/partner/marchi-loghi-e-carta-grafica-winbiz-e-logicial https://www.winbiz.ch/it/winbiz-local
+    Redirect /en/services/winbiz-training-sessions/order-support-materials https://www.winbiz.ch/en/community
+    Redirect /en/services/winbiz-training-sessions/fiduciaries/fiduciaries https://www.winbiz.ch/en/trainings/fiduciary-training/fiduciaries
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/purchases https://www.winbiz.ch/en/trainings/entrepreneurial-training/purchases
+    Redirect /en/enterprise-management-software/discover-winbiz-extensions https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/kostenloser-test-waehrend-30-tagen https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/kostenloser-test-waehrend-30-tagen https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/branchenloesungen/my-post-business https://www.winbiz.ch/de/produkt
+    Redirect /8-choses-a-savoir-apres-avoir-lance-une-entreprise-en-suisse https://www.winbiz.ch/fr
+    Redirect /logiciel-gestion-entreprise/payeye-lecteur-de-swiss-qr-code https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/corsi/download-di-esercizi-per-i-corsi-winbiz https://www.winbiz.ch/it/comunita
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/swissdec https://www.winbiz.ch/en/trainings/entrepreneurial-training/swissdec
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/projects https://www.winbiz.ch/en/trainings/entrepreneurial-training/projects
+    Redirect /de-ch/verwaltungsprogramm/winbiz-enterprise-packs-entdecken https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/sms-gateway https://www.winbiz.ch/de/produkt
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/telecharger https://www.winbiz.ch/fr/support/telechargements
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/sms-gateway https://www.winbiz.ch/fr/produit
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/payroll https://www.winbiz.ch/en/trainings/entrepreneurial-training/payroll
+    Redirect /en/enterprise-management-software/ultimate-enterprise-pack https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-commerce https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/ueber-uns/zertifizierungen-und-labels/iso-20022-norm https://www.winbiz.ch/de
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz/bouclement https://www.winbiz.ch/fr/support
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-commerce https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-ultimate https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-support-and-updates/v-i-p-subscription https://www.winbiz.ch/en/support
+    Redirect /en/enterprise-management-software/discover-winbiz-modules https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen/e-banking https://www.winbiz.ch/de/produkt
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz/e-banking https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/corsi/winbiz-specialists/winbiz-specialist https://www.winbiz.ch/it/trainings/winbiz-specialist/corso-winbiz-specialist
+    Redirect /it-ch/programma-gestione-impresa/soluzioni-professionali https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/stock https://www.winbiz.ch/en/trainings/entrepreneurial-training/stock
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs/sales https://www.winbiz.ch/en/trainings/entrepreneurial-training/sales
+    Redirect /en/services/winbiz-support-and-updates/remote-assistance https://www.winbiz.ch/en/support
+    Redirect /it-ch/programma-gestione-impresa/scoprite-moduli-winbiz https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/customised-courses https://www.winbiz.ch/en/community
+    Redirect /en/services/winbiz-support-and-updates/versions-history https://www.winbiz.ch/en/support/updates
+    Redirect /en/enterprise-management-software/welcome-businessmaker https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/entreprise-basic-pack https://www.winbiz.ch/en/product
+    Redirect /de-ch/dienste/winbiz-support-und-update/versionsverlauf https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/buchhaltung https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/buchhaltung
+    Redirect /de-ch/dienste/winbiz-schulungen/treuhaender/treuhaender https://www.winbiz.ch/de/trainings/treuhandschulung/treuhander
+    Redirect /de-ch/dienste/winbiz-schulungen/individuelle-schulungen https://www.winbiz.ch/de/gemeinschaft
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti/download https://www.winbiz.ch/it/supporto/scarica
+    Redirect /it-ch/programma-gestione-impresa/welcome-businessmaker https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/programma-gestione-impresa/pack-entreprise-basic https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/winbiz-specialist https://www.winbiz.ch/en/trainings/winbiz-specialist/winbiz-specialist-course
+    Redirect /en/enterprise-management-software/winbiz-for-fiduciary https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/winbiz-cash-register https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/enterprise-professional-pack https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-support-und-update/gratis-support https://www.winbiz.ch/de/unterstutzung
+    Redirect /services-winbiz/formation/commander-supports-de-cours https://www.winbiz.ch/fr/communaute
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-professional https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/innovare-e-in-fin-dei-conti-abbastanza-semplice https://www.winbiz.ch/it
+    Redirect /en/services/winbiz-support-and-updates/online-support https://www.winbiz.ch/en/support
+    Redirect /de-ch/dienste/winbiz-support-und-update/herunterladen https://www.winbiz.ch/de/unterstutzung
+    Redirect /services-winbiz/formation/entrepreneurs/comptabilite https://www.winbiz.ch/fr/formations/formations-entrepreneurs/comptabilite
+    Redirect /logiciel-gestion-entreprise/decouvrez-modules-winbiz https://www.winbiz.ch/fr/produit
+    Redirect /gestion-dentreprises-en-suisse-ce-qui-change-en-2019 https://www.winbiz.ch/fr
+    Redirect /fr/logiciel-gestion-entreprise/pack-entreprise-basic https://www.winbiz.ch/fr/produit
+    Redirect /en/enterprise-management-software/included-in-winbiz https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/business-solutions https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/payeye-swiss-qr-code-leser https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/ueber-uns/zertifizierungen-und-labels/swissdec https://www.winbiz.ch/de
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/swissdec https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/swissdec
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/projekte https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/projekte
+    Redirect /logiciel-gestion-entreprise/winbiz-pour-fiduciaires https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/winbiz-pour-fiduciaires https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/essai-30-jours-gratuits https://www.winbiz.ch/fr/produit
+    Redirect /de-ch/dienste/winbiz-support-und-update/vip-support https://www.winbiz.ch/de/unterstutzung/aktualisierungen
+    Redirect /de-ch/dienste/winbiz-support-und-update/fernwartung https://www.winbiz.ch/de/unterstutzung
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/verkauf https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/verkauf
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/einkauf https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/einkauf
+    Redirect /it-ch/programma-gestione-impresa/incluso-in-winbiz https://www.winbiz.ch/it/prodotto
+    Redirect /fr/logiciel-gestion-entreprise/comparatif-detaille https://www.winbiz.ch/fr/produit
+    Redirect /en/services/winbiz-training-sessions/entrepreneurs https://www.winbiz.ch/en/trainings/entrepreneurial-training/swissdec
+    Redirect /en/enterprise-management-software/agro-fiduciaries https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/willkommen-businessmaker https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/willkommen-businessmaker https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/enterprise-ultimate-pack https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/loehne https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/lohne
+    Redirect /de-ch/clx_mediarelease_ch_winbiz_fr_210114_final-2 https://www.winbiz.ch/de
+    Redirect /services-winbiz/formation/fiduciaires/fiduciaires https://www.winbiz.ch/fr/formations/formations-fiduciaires/fiduciaires
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-ultimate https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/programma-gestione-impresa/winbiz-fiduciari https://www.winbiz.ch/it/prodotto
+    Redirect /fr/services/formation/commander-supports-de-cours https://www.winbiz.ch/fr/support
+    Redirect /en/enterprise-management-software/winbiz-projects https://www.winbiz.ch/en/product
+    Redirect /en/enterprise-management-software/try-winbiz-free https://www.winbiz.ch/en/product
+    Redirect /de-ch/verwaltungsprogramm/winbiz-module-entdecken https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/dienste/winbiz-schulungen/winbiz-specialist https://www.winbiz.ch/de/trainings/winbiz-specialist/schulung-winbiz-specialist
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer/lager https://www.winbiz.ch/de/trainings/unternehmerische-ausbildung/stock
+    Redirect /de-ch/die-raiffeisenbank-andert-ihre-iban-nummern https://www.winbiz.ch/de
+    Redirect /a-propos/certifications-et-labels/norme-iso-20022 https://www.winbiz.ch/fr/winbiz
+    Redirect /services-winbiz/formation/entrepreneurs/swissdec https://www.winbiz.ch/fr/formations/formations-entrepreneurs/swissdec
+    Redirect /services-winbiz/formation/entrepreneurs/salaires https://www.winbiz.ch/fr/formations/formations-entrepreneurs/salaires
+    Redirect /logiciel-gestion-entreprise/edition-winbiz-cloud https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/su-di-noi/certificazioni-e-label/iso-20022 https://www.winbiz.ch/it/winbiz
+    Redirect /it-ch/programma-gestione-impresa/fiduciario-agro https://www.winbiz.ch/it/prodotto
+    Redirect /en/services/winbiz-training-sessions/fiduciaries https://www.winbiz.ch/en/trainings/fiduciary-training/fiduciaries
+    Redirect /services-winbiz/formation/entrepreneurs/projets https://www.winbiz.ch/fr/formations/formations-entrepreneurs/projets
+    Redirect /it-ch/su-di-noi/certificazioni-e-label/swissdec https://www.winbiz.ch/it/winbiz
+    Redirect /en/services/winbiz-support-and-updates/download https://www.winbiz.ch/en/support/downloads
+    Redirect /en/clx_mediarelease_ch_winbiz_fr_210114_final-2 https://www.winbiz.ch/en
+    Redirect /de-ch/verwaltungsprogramm/in-winbiz-inbegriffen https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/enterprise-basic-pack https://www.winbiz.ch/de/produkt
+    Redirect /services-winbiz/support-et-mises-a-jour-winbiz https://www.winbiz.ch/fr/support
+    Redirect /services-winbiz/formation/entrepreneurs/ventes https://www.winbiz.ch/fr/formations/formations-entrepreneurs/ventes
+    Redirect /services-winbiz/formation/entrepreneurs/achats https://www.winbiz.ch/fr/formations/formations-entrepreneurs/achats
+    Redirect /logiciel-gestion-entreprise/winbiz-cloud-basic https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/inclus-dans-winbiz https://www.winbiz.ch/fr/produit
+    Redirect /souhaitez-vous-creer-une-entreprise-en-suisse https://www.winbiz.ch/fr
+    Redirect /services-winbiz/formation/entrepreneurs/stock https://www.winbiz.ch/fr/formations/formations-entrepreneurs/stock
+    Redirect /services-winbiz/formation/cours-personnalises https://www.winbiz.ch/fr/communaute
+    Redirect /logiciel-gestion-entreprise/solutions-metiers https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/winbiz-supporto-e-aggiornamenti https://www.winbiz.ch/it/supporto
+    Redirect /it-ch/servizi/corsi/imprenditori/contabilita https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/contabilita
+    Redirect /it-ch/la-banca-raiffeisen-cambia-i-suoi-iban https://www.winbiz.ch/it
+    Redirect /en/enterprise-management-software/accounting https://www.winbiz.ch/en/product
+    Redirect /en/about/certifications-and-labels/iso-20022 https://www.winbiz.ch/en/winbiz
+    Redirect /de-ch/verwaltungsprogramm/winbiz-treuhaender https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/verwaltungsprogramm/winbiz-treuhaender https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/contrat_de_licence_utilisateur_final-2 https://www.winbiz.ch/de
+    Redirect /services-winbiz/formation/winbiz-specialist https://www.winbiz.ch/fr/formations/winbiz-specialist/cours-winbiz-specialist
+    Redirect /logiciel-gestion-entreprise/fiduciaire-agro https://www.winbiz.ch/fr/produit
+    Redirect /logiciel-gestion-entreprise/fiduciaire-agro https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/winbiz-fiduciari/soluzione-fiduciaria https://www.winbiz.ch/it/winbiz
+    Redirect /it-ch/servizi/corsi/imprenditori/inventario https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/inventario
+    Redirect /en/about/certifications-and-labels/swissdec https://www.winbiz.ch/en/winbiz
+    Redirect /de-ch/verwaltungsprogramm/branchenloesungen https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/ueber-uns/zertifizierungen-und-labels https://www.winbiz.ch/de
+    Redirect /de-ch/dienste/winbiz-schulungen/unternehmer https://www.winbiz.ch/de/gemeinschaft
+    Redirect /de-ch/dienste/winbiz-schulungen/treuhaender https://www.winbiz.ch/de/trainings/treuhandschulung/treuhander
+    Redirect /de-ch/conditions_generales_de_ventes_2019-2 https://www.winbiz.ch/de
+    Redirect /comment-boucler-son-annee-en-toute-serenite https://www.winbiz.ch/fr
+    Redirect /partenaires/marques-logos-charte-graphique https://www.winbiz.ch/fr/winbiz-local
+    Redirect /de-ch/verwaltungsprogramm/agro-treuhaender https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/innovieren-ist-endlich-einfach-genug https://www.winbiz.ch/de
+    Redirect /clx_mediarelease_ch_winbiz_fr_210114_final https://www.winbiz.ch/fr
+    Redirect /a-propos/certifications-et-labels/swissdec https://www.winbiz.ch/fr/winbiz
+    Redirect /logiciel-gestion-entreprise/businessmaker https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/servizi/corsi/imprenditori/swissdec https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/swissdec
+    Redirect /it-ch/servizi/corsi/imprenditori/progetti https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/progetti
+    Redirect /it-ch/servizi/corsi/imprenditori/acquisti https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/swissdec
+    Redirect /it-ch/programma-gestione-impresa/veoprint https://www.winbiz.ch/it/prodotto
+    Redirect /fr/fiduciaires-winbiz/solution-fiduciaire https://www.winbiz.ch/fr/produit
+    Redirect /en/enterprise-management-software/payroll https://www.winbiz.ch/en/product
+    Redirect /it-ch/servizi/corsi/imprenditori/vendite https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/vendite
+    Redirect /it-ch/servizi/corsi/corsi-personalizzati https://www.winbiz.ch/it/comunita
+    Redirect /de-ch/kostenloser-test-waehrend-30-tagen https://www.winbiz.ch/de
+    Redirect /services-winbiz/formation/entrepreneurs https://www.winbiz.ch/fr/formations/formations-entrepreneurs/swissdec
+    Redirect /it-ch/servizi/corsi/ordinate-i-supporti https://www.winbiz.ch/it/trainings/formazione-fiduciaria/fiduciari
+    Redirect /it-ch/servizi/corsi/imprenditori/salari https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/salari
+    Redirect /it-ch/servizi/corsi/fiduciari/fiduciari https://www.winbiz.ch/it/trainings/formazione-fiduciaria/fiduciari
+    Redirect /de-ch/dienste/winbiz-support-und-update https://www.winbiz.ch/de/unterstutzung
+    Redirect /it-ch/su-di-noi/certificazioni-e-label https://www.winbiz.ch/it/winbiz
+    Redirect /it-ch/servizi/corsi/winbiz-specialists https://www.winbiz.ch/it/trainings/winbiz-specialist/corso-winbiz-specialist
+    Redirect /it-ch/category/evenements-winbiz-it-ch https://www.winbiz.ch/it
+    Redirect /en/services/winbiz-support-and-updates https://www.winbiz.ch/en/support/downloads
+    Redirect /en/innovating-is-finally-pretty-simple https://www.winbiz.ch/en
+    Redirect /de-ch/partner/api/kontaktieren-sie-uns https://www.winbiz.ch/de/winbiz-local
+    Redirect /services-winbiz/formation/fiduciaires https://www.winbiz.ch/fr/formations/formations-fiduciaires/fiduciaires
+    Redirect /it-ch/partner/sviluppatori-winbiz-geo https://www.winbiz.ch/it/winbiz-local
+    Redirect /de/kostenloser-test-waehrend-30-tagen https://www.winbiz.ch/de
+    Redirect /de-ch/category/winbiz-veranstaltungen https://www.winbiz.ch/de
+    Redirect /logiciel-gestion-entreprise/veoprint https://www.winbiz.ch/fr/produit
+    Redirect /la-banque-raiffeisen-change-ses-iban https://www.winbiz.ch/fr
+    Redirect /it-ch/scelta-del-pacchetto-di-ordini https://www.winbiz.ch/it
+    Redirect /en/services/winbiz-training-sessions https://www.winbiz.ch/en/community
+    Redirect /en/raiffeisen-bank-changes-its-ibans https://www.winbiz.ch/en
+    Redirect /de-ch/ueber-uns/kontaktieren-sie-uns https://www.winbiz.ch/de/kontakt
+    Redirect /contrat_de_licence_utilisateur_final https://www.winbiz.ch/fr
+    Redirect /innover-est-finalement-assez-simple https://www.winbiz.ch/fr
+    Redirect /de-ch/partner/entwickler-winbiz-geo https://www.winbiz.ch/de/winbiz-local
+    Redirect /conditions_generales_de_ventes_2019 https://www.winbiz.ch/fr
+    Redirect /en/about/certifications-and-labels https://www.winbiz.ch/en/winbiz
+    Redirect /en/enterprise-management-software https://www.winbiz.ch/en/product
+    Redirect /a-propos/certifications-et-labels https://www.winbiz.ch/fr/winbiz
+    Redirect /partenaires/developpeurs-premium https://www.winbiz.ch/fr/winbiz-local
+    Redirect /it-ch/servizi/corsi/imprenditori https://www.winbiz.ch/it/trainings/formazione-imprenditoriale/swissdec
+    Redirect /it-ch/programma-gestione-impresa https://www.winbiz.ch/it/prodotto
+    Redirect /it-ch/author/pascal-eichenberger https://www.winbiz.ch/it
+    Redirect /en/category/evenements-winbiz-en https://www.winbiz.ch/en
+    Redirect /iso20022-camt-quest-ce-que-cest https://www.winbiz.ch/fr
+    Redirect /de-ch/dienste/winbiz-schulungen https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/ueber-uns/offene-stellen https://www.winbiz.ch/de
+    Redirect /it/servizi/corsi/imprenditori https://www.winbiz.ch/it
+    Redirect /it-ch/servizi/corsi/fiduciari https://www.winbiz.ch/it/trainings/formazione-fiduciaria/fiduciari
+    Redirect /it-ch/category/logiciel-it-ch https://www.winbiz.ch/it
+    Redirect /en/partners/winbiz-developers https://www.winbiz.ch/en/winbiz-local
+    Redirect /de-ch/category/logiciel-de-ch https://www.winbiz.ch/de
+    Redirect /it-ch/su-di-noi/reclutamento https://www.winbiz.ch/it/winbiz
+    Redirect /it-ch/partner/api/contattaci https://www.winbiz.ch/it/winbiz-local
+    Redirect /de-ch/paketauswahl-bestellen https://www.winbiz.ch/de
+    Redirect /logiciel-gestion-entreprise https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/su-di-noi/team-winbiz https://www.winbiz.ch/it/winbiz
+    Redirect /de-ch/ueber-uns/winbiz-team https://www.winbiz.ch/de
+    Redirect /it-ch/su-di-noi/contattaci https://www.winbiz.ch/it/contatta
+    Redirect /en/partners/api/contact-us https://www.winbiz.ch/en/winbiz-local
+    Redirect /de-ch/wbc_fwb_2020-09_fr-2 https://www.winbiz.ch/de
+    Redirect /de-ch/tableau_e-commerce-2 https://www.winbiz.ch/de
+    Redirect /category/evenements-winbiz https://www.winbiz.ch/fr
+    Redirect /services-winbiz/formation https://www.winbiz.ch/fr/communaute
+    Redirect /de/treuhandbuero-beaumont https://www.winbiz.ch/de
+    Redirect /de-ch/verwaltungsprogramm https://www.winbiz.ch/de/produkt
+    Redirect /it-ch/su-di-noi/showroom https://www.winbiz.ch/it/winbiz
+    Redirect /it-ch/partner/api/apikey https://www.winbiz.ch/it/winbiz-local
+    Redirect /en/category/unclassified https://www.winbiz.ch/en
+    Redirect /en/author/bastien_schule https://www.winbiz.ch/en
+    Redirect /de-ch/ueber-uns/showroom https://www.winbiz.ch/de
+    Redirect /de-ch/partner/api/apikey https://www.winbiz.ch/de/winbiz-local
+    Redirect /de-ch/fp_winbiz_caisse-2 https://www.winbiz.ch/de
+    Redirect /partenaires/api/contact https://www.winbiz.ch/fr/winbiz-local
+    Redirect /en/category/logiciel-en https://www.winbiz.ch/en
+    Redirect /a-propos/nous-contacter https://www.winbiz.ch/fr/contact
+    Redirect /partenaires/api/apikey https://www.winbiz.ch/fr/winbiz-local
+    Redirect /en/partners/api/apikey https://www.winbiz.ch/en/winbiz-local
+    Redirect /de/verwaltungsprogramm https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/category/neuheit https://www.winbiz.ch/de
+    Redirect /a-propos/equipe-winbiz https://www.winbiz.ch/fr/winbiz
+    Redirect /it-ch/su-di-noi/legal https://www.winbiz.ch/it/winbiz
+    Redirect /it-ch/fiduciario-agro https://www.winbiz.ch/it
+    Redirect /it-ch/category/novita https://www.winbiz.ch/it
+    Redirect /en/category/whats-new https://www.winbiz.ch/en
+    Redirect /de-ch/ueber-uns/legal https://www.winbiz.ch/de
+    Redirect /author/bastien_schule https://www.winbiz.ch/fr
+    Redirect /it-ch/su-di-noi/blog https://www.winbiz.ch/it/winbiz
+    Redirect /en/remote-assistance https://www.winbiz.ch/en/support
+    Redirect /en/order-pack-choice https://www.winbiz.ch/en/product
+    Redirect /en/about/winbiz-team https://www.winbiz.ch/en/winbiz
+    Redirect /en/about/recruitment https://www.winbiz.ch/en/winbiz
+    Redirect /de-ch/ueber-uns/blog https://www.winbiz.ch/de/winbiz
+    Redirect /commander-choix-pack https://www.winbiz.ch/fr/produit
+    Redirect /a-propos/recrutement https://www.winbiz.ch/fr/winbiz
+    Redirect /it-ch/servizi/corsi https://www.winbiz.ch/it/comunita
+    Redirect /en/about/contact-us https://www.winbiz.ch/en/contact
+    Redirect /category/nouveautes https://www.winbiz.ch/fr
+    Redirect /winbiz-awards-2018 https://www.winbiz.ch/fr
+    Redirect /wbc_fwb_2020-09_fr https://www.winbiz.ch/fr
+    Redirect /it-ch/winbiz-cloud https://www.winbiz.ch/it/winbiz
+    Redirect /downloads/dotnet47 https://www.winbiz.ch/de/unterstutzung/downloads
+    Redirect /de-ch/winbiz-cloud https://www.winbiz.ch/de/produkt
+    Redirect /de-ch/winbiz-cloud https://www.winbiz.ch/de/produkt
+    Redirect /de-ch?page_id=3696 https://www.winbiz.ch/de/produkt
+    Redirect /de-ch?page_id=2098 https://www.winbiz.ch/de/produkt
+    Redirect /de-ch?page_id=2091 https://www.winbiz.ch/de/produkt
+    Redirect /it-ch/partner/api https://www.winbiz.ch/it/winbiz-local
+    Redirect /en/about/showroom https://www.winbiz.ch/en/winbiz
+    Redirect /de-ch/partner/api https://www.winbiz.ch/de/winbiz-local
+    Redirect /category/logiciel https://www.winbiz.ch/fr
+    Redirect /a-propos/showroom https://www.winbiz.ch/fr/winbiz
+    Redirect /sms/envoyer-sms https://www.winbiz.ch/fr
+    Redirect /services-winbiz https://www.winbiz.ch/fr/communaute
+    Redirect /partenaires/api https://www.winbiz.ch/fr/winbiz-local
+    Redirect /it-ch/su-di-noi https://www.winbiz.ch/it/winbiz
+    Redirect /en/winbiz-cloud https://www.winbiz.ch/en/product
+    Redirect /en/winbiz-cloud https://www.winbiz.ch/en/product
+    Redirect /en/partners/api https://www.winbiz.ch/en/winbiz-local
+    Redirect /en?page_id=3682 https://www.winbiz.ch/en/product
+    Redirect /en?page_id=3622 https://www.winbiz.ch/en/product
+    Redirect /en?page_id=2106 https://www.winbiz.ch/en/product
+    Redirect /downloads/is/fr https://www.winbiz.ch/de/unterstutzung/downloads
+    Redirect /de-ch/ueber-uns https://www.winbiz.ch/de/winbiz
+    Redirect /en/about/legal https://www.winbiz.ch/en/winbiz
+    Redirect /a-propos/legal https://www.winbiz.ch/fr/winbiz
+    Redirect /it-ch/partner https://www.winbiz.ch/it/winbiz-local
+    Redirect /en/about/blog https://www.winbiz.ch/en/winbiz
+    Redirect /de-ch/partner https://www.winbiz.ch/de/winbiz-local
+    Redirect /de-ch/dienste https://www.winbiz.ch/de/produkt
+    Redirect /de-ch?p=13456 https://www.winbiz.ch/de/produkt
+    Redirect /de-ch?p=12754 https://www.winbiz.ch/de/produkt
+    Redirect /a-propos/blog https://www.winbiz.ch/fr/winbiz
+    Redirect /winbiz-cloud https://www.winbiz.ch/fr/produit
+    Redirect /it-ch/signin https://member.winbiz.ch/it/signin
+    Redirect /fr/hackathon https://www.winbiz.ch/fr
+    Redirect /fr/commander https://www.winbiz.ch/fr/produit
+    Redirect /de-ch/signin https://member.winbiz.ch/de/signin
+    Redirect /de-ch?p=1788 https://www.winbiz.ch/de/produkt
+    Redirect /de-ch?p=1476 https://www.winbiz.ch/de/produkt
+    Redirect /partenaires https://www.winbiz.ch/fr/winbiz-local
+    Redirect /partenaires https://www.winbiz.ch/fr/winbiz-local
+    Redirect /it/download https://www.winbiz.ch/it/supporto/scarica
+    Redirect /en/services https://www.winbiz.ch/en/support
+    Redirect /en/partners https://www.winbiz.ch/en/winbiz-local
+    Redirect /en/download https://www.winbiz.ch/en/support/downloads
+    Redirect /telecharger/winbiz-cloud https://www.winbiz.ch/fr/winbiz
+    Redirect /fr/apikey https://www.winbiz.ch/fr
+    Redirect /en/signin https://member.winbiz.ch/en/auth/login
+    Redirect /en/about https://www.winbiz.ch/en/winbiz
+    Redirect /appstore https://winbizappstore.ch
+    Redirect /a-propos https://www.winbiz.ch/fr/winbiz
+    Redirect /signup https://member.winbiz.ch/fr/auth/signup
+    Redirect /signin https://member.winbiz.ch/fr/auth/login
+    Redirect /tag/85 https://www.winbiz.ch/fr
+    Redirect /signin https://member.winbiz.ch/fr/auth/login
+    Redirect /it-ch https://www.winbiz.ch/it
+    Redirect /de-ch https://www.winbiz.ch/de
+    Redirect /api https://www.winbiz.ch/fr/produit
+    Redirect /espace-client https://member.winbiz.ch/fr/auth/login
+    Redirect /data https://helpcenter.winbiz.ch/hc/fr/articles/360002931494
+
+
+    RewriteEngine On
+    # language starts with DE
+    RewriteCond %{HTTP:Accept-Language} ^de [NC]
+    RewriteRule ^$ /de/ [L,R=302]
+
+    # language starts with EN
+    RewriteCond %{HTTP:Accept-Language} ^en [NC]
+    RewriteRule ^$ /en/ [L,R=302]
+
+    # language starts with FR
+    RewriteCond %{HTTP:Accept-Language} ^fr [NC]
+    RewriteRule ^$ /fr/ [L,R=302]
+
+    # language starts with IT
+    RewriteCond %{HTTP:Accept-Language} ^it [NC]
+    RewriteRule ^$ /it [L,R=302]
+
+    # else redirect to the French version
+    # RewriteCond %{HTTP:Accept-Language} !^/(de|fr|en|it)$ [NC]
+    # RewriteRule ^$ /fr [L,R=302]
+
+    #Redirect Download Winbiz
+    #URL used on winbiz order confirmation
+    Redirect /fr/install-winbiz-cloud /fr/support/telechargements
+    Redirect /de/install-winbiz-cloud /de/unterstutzung/downloads
+    Redirect /it/install-winbiz-cloud /it/supporto/scarica
+    Redirect /en/install-winbiz-cloud /en/support/downloads
+    
+    #URL used on member space order form - VIP more info link
+    Redirect /fr/vip-support /fr/support/assistance-vip
+    Redirect /de/vip-support /de/unterstutzung/vip-unterstutzung
+    Redirect /it/vip-support /it/supporto/supporto-vip
+    Redirect /en/vip-support /en/support/vip-support
+
+    #Redirect Home
+    Redirect /fr/accueil /fr
+    Redirect /en/homepage /en
+    Redirect /de/homepage /de
+    Redirect /it/homepage /it
+
+    # Redirect /fr/terms-and-conditions /fr/terms-and-conditions
+    # Redirect /de/terms-and-conditions /de/terms-and-conditions
+    # Redirect /it/terms-and-conditions /it/terms-and-conditions
+    # Redirect /en/terms-and-conditions /en/terms-and-conditions
+    
+    # takes care of old wordpress urls
+    RewriteEngine On
+	RewriteCond %{QUERY_STRING} url [OR]
+	RewriteCond %{QUERY_STRING} page_id [OR]
+	RewriteCond %{QUERY_STRING} p [OR]
+	RewriteCond %{QUERY_STRING} elementor_library [OR]
+	RewriteCond %{QUERY_STRING} s [NC]
+	RewriteRule .* https://www.winbiz.ch/? [R=301,L]
+
+    <IfModule mod_proxy_http.c>
+        RewriteCond %{HTTP_USER_AGENT} googlebot|bingbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest\/0\.|pinterestbot|slackbot|vkShare|W3C_Validator [NC,OR]
+        RewriteCond %{QUERY_STRING} _escaped_fragment_
+
+        # Only proxy the request to Prerender if it's a request for HTML
+        RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent|\.ttf|\.woff|\.svg))(.*) https://service.prerender.io/https://www.winbiz.ch/$2 [P,L]
+    </IfModule>
+
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|html|js|css|htm|xml|txt|svg|xsl|woff|woff2|mp4|webp)$">
+    Header set Cache-Control "max-age=31536050"
+</FilesMatch>
+
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE "application/atom+xml" "application/javascript" "application/json" "application/ld+json" "application/manifest+json" "application/rdf+xml" "application/rss+xml" "application/schema+json" "application/vnd.geo+json" "application/vnd.ms-fontobject" "application/x-font-ttf" "application/x-javascript" "application/x-web-app-manifest+json" "application/xhtml+xml" "application/xml" "font/eot" "font/opentype" "image/bmp" "image/svg+xml" "image/vnd.microsoft.icon" "image/x-icon" "text/cache-manifest" "text/css" "text/html" "text/javascript" "text/plain" "text/vcard" "text/vnd.rim.location.xloc" "text/vtt" "text/x-component" "text/x-cross-domain-policy" "text/xml"

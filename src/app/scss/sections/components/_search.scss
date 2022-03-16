@@ -1,0 +1,106 @@
+.search {
+  z-index: 1;
+  @extend %flexCenter;
+  @include small-mobile-scr {
+    width: 90%
+  }
+
+  &__input-ontainer {
+    @extend %flexCenter;
+    flex-direction: column;
+    @include mobile-scr {
+      width: 90%;
+    }
+  }
+
+  &__label {
+    font-weight: $normal;
+    color: $tagBody;
+  }
+
+  &__input-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba($color: $white, $alpha: 0.3);
+    border-radius: 18px;
+    width: 570px;
+    height: 46px;
+    margin-top: 1.4vh;
+    @include xl-computer-scr {
+      width: 480px;
+      height: 38px;
+    }
+    @include tablet-scr {
+      width: 400px;
+    }
+    @include mobile-scr {
+      width: 320px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 48px;
+      height: 30px;
+      width: 1px;
+      background: $tagBody;
+      @include xl-computer-scr {
+        height: 25px;
+      }
+      @include tablet-scr {
+        left: 46px;
+      }
+    }
+
+    ::placeholder {
+      color: $tagBody;
+      font-size: 18px;
+      font-weight: $normal;
+      @include tablet-scr {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__icon {
+    color: $tagBody;
+    font-size: 18px;
+    transform: scale(-1, 1);
+    margin-left: 15px;
+    @include tablet-scr {
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-top: 6px;
+    padding-right: 10px;
+    width: 510px;
+    height: 100%;
+    @include xl-computer-scr {
+      width: 420px;
+    }
+    @include tablet-scr {
+      width: 345px;
+    }
+    @include mobile-scr {
+      width: 265px;
+    }
+
+    &:focus {
+      color: $white;
+      font-size: 18px;
+    }
+  }
+
+  select {
+    color: $white;
+    font-size: 18px;
+  }
+}

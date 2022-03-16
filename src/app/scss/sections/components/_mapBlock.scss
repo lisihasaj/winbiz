@@ -1,0 +1,333 @@
+.map-block {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    background-color: #f5f5f5;
+
+    &__container {
+        padding-top: 130px;
+        padding-bottom: 120px;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include lg-computer-scr {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        @include computer-scr {
+            flex-wrap: wrap;
+        }
+        @include tablet-scr {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        @include mini-tablet-scr {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        text-align: start;
+        @include tablet-scr {
+            margin-bottom: 50px
+        }
+
+        .title {
+            @extend %flexColumnStartStart;
+            margin-bottom: 55px;
+            @include computer-scr {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60vw;
+            }
+            @include tablet-scr {
+                position: unset;
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-weight: $bold;
+                color: $black;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+            
+            p {
+                font-size: 20px;
+                font-weight: $medium;
+                color: $tagText;
+                line-height: 26px;
+            }
+        }
+
+        .partner {
+            &-selectors {
+                @include computer-scr {
+                    margin-top: 150px;
+                }
+                @include tablet-scr {
+                    margin-top: 0;
+                }
+
+                .partner-checkbox {
+                    .checkbox-ex__label-wrapper {
+                        @include computer-scr {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .checkbox-ex__label {
+                        @include lg-computer-scr {
+                            margin-top: 4px;
+                        }
+                    }
+                }
+
+                :nth-child(1) {
+                    .checkbox-ex__toggle {
+                        background-color: $black;
+                        border: $black;
+                        pointer-events: none;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &-checkbox {
+                margin-bottom: 40px;
+            }
+
+            &-description {
+                font-size: 20px;
+                font-weight: $medium;
+                color: $black;
+                line-height: 26px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__map {
+        align-items: flex-end;
+        @include computer-scr {
+            align-items: center;
+        }
+    
+        .search-block {
+            margin-bottom: 60px;
+            @include computer-scr {
+                margin-bottom: 40px;
+                width: 90%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            @include tablet-scr {
+                justify-content: flex-start;
+            }
+            @include mini-tablet-scr {
+                width: 100%;
+            }
+    
+            &__input-box {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $tagBody;
+                box-shadow: $smoothShadow;
+                border-radius: 18px;
+                width: 355px;
+                height: 35px;
+                margin-top: 1.4vh;
+            
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 48px;
+                    height: 25px;
+                    width: 1px;
+                    background: $tagText;
+                    @include mobile-scr {
+                        left: 38px;
+                    }
+                }
+            
+                ::placeholder {
+                    color: $tagText;
+                    padding-top: 3px;
+                    font-size: 18px;
+                    font-weight: $normal;
+                }
+            }
+            
+            &__icon {
+                color: $tagText;
+                font-size: 18px;
+                transform: scale(-1, 1);
+                margin-left: 15px;
+                @include mobile-scr {
+                    margin-left: 8px;
+                }
+            }
+            
+            &__input {
+                background: transparent;
+                border: none;
+                outline: none;
+                padding-top: 6px;
+                padding-right: 10px;
+                width: 84%;
+                height: 100%;
+                @include mobile-scr {
+                    width: 87%;
+                }
+            
+                &:focus {
+                    color: $black;
+                    font-size: 18px;
+                }
+            }
+            
+            select {
+                color: $white;
+                font-size: 18px;
+            }
+        }
+    
+        .map-box {
+            width: 90%;
+            height: 615px;
+            background-color: $tagText;
+            border-radius: 20px;
+            box-shadow: 1px 1px 12px rgba($color: #000000, $alpha: 0.3);
+            @include lg-computer-scr {
+                width: 95%;
+            }
+            @include mini-tablet-scr {
+                width: 100%;
+            }
+    
+            .gm {
+                &-style {
+                    outline: none !important;
+                    font-family: 'Campton';
+    
+                    
+                }
+            }
+
+            .cluster,
+            .cluster-0 {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                }
+
+                div {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    width: fit-content;
+                    height: fit-content;
+                    color: $white;
+                    font-weight: $bold;
+                }
+            }
+    
+            .content {
+                text-align: start !important;
+                min-width: 200px;
+    
+                .firstHeading {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: $semiBold;
+                    color: $brandColor;
+                    margin-bottom: 5px;
+                }
+    
+                .bodyContent {
+                    max-width: 320px;
+
+                    .address,
+                    .city,
+                    .phone,
+                    .email,
+                    .website {
+                        font-size: 12px;
+                        font-weight: $normal;
+                        color: $tagText;
+                        text-decoration: none !important;
+                        transition: all 0.2s ease;
+                        @include mobile-scr {
+                            margin: 5px 0;
+                        }
+                    }
+
+                    .phone,
+                    .email,
+                    .website {
+                        &:hover {
+                            color: $brandColor;
+                        }
+                    }
+                }
+    
+                button {
+                    display: none;
+                }
+    
+                .gm-ui-hover-effect {
+                    display: none;
+    
+                    img {
+                        width: 14px;
+                        height: 30px;
+                        margin: 4px;
+                        display: none;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.course-map {
+    .map-block {
+        &__container {
+            padding-top: 60px;
+            padding-bottom: 80px;
+            align-items: center;
+        }
+
+        &__content {
+            .partner-selectors {
+                @include computer-scr {
+                    margin-top: 220px;
+                }
+                @include tablet-scr {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+// MEDIA QUERIES
+@mixin small-mobile-scr {
+    @media only screen and (max-width: $smallMobileBreakpoint) {
+        @content;
+    }
+}
+
+@mixin mobile-scr {
+    @media only screen and (max-width: $mobileBreakpoint) {
+        @content;
+    }
+}
+
+@mixin mini-tablet-scr {
+    @media only screen and (max-width: $miniTabletBreakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet-scr {
+    @media only screen and (max-width: $tabletBreakpoint) {
+        @content;
+    }
+}
+
+@mixin computer-scr {
+    @media only screen and (max-width: $computerBreakpoint) {
+        @content;
+    }
+}
+
+@mixin lg-computer-scr {
+    @media only screen and (max-width: $largeMonitorBreakpoint) {
+        @content;
+    }
+}
+
+@mixin xl-computer-scr {
+    @media only screen and (max-width: $extraLargeMonitorBreakpoint) {
+        @content;
+    }
+}
+
+@mixin wide-computer-scr {
+    @media only screen and (max-width: $widescreenBreakpoint) {
+        @content;
+    }
+}
+
+
+// GENRAL MIXINS
+@mixin font-size($sizeValue: 1.6, $important: null) {
+    font-size: ($sizeValue * 10) + px $important;
+    font-size: $sizeValue + rem $important;
+}
+
+@mixin v-align($position) {
+    top: $position;
+    transform: translateY(-$position);
+}
+
+@mixin box($arg) {
+    width: $arg;
+    height: $arg;
+}
+
+@mixin fullHeight($position: absolute) {
+    position: $position;
+    top: 0;
+    left: 0;
+    @include box(100%);
+}
+
+
+// FLEX MIXINS
+@mixin flexCenter() {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+@mixin fontSize($default, $lg: null, $md: null, $sm: null, $xs: null) {
+    font-size: $default + px;
+    @if $lg != null {
+        @include lg-computer-scr {
+            font-size: $lg + px;
+        } 
+    }
+    @if $md != null {
+        @include md-computer-scr {
+            font-size: $md + px;
+        } 
+    }    
+    @if $sm != null {
+        @include tablet-scr {
+            font-size: $sm + px;
+        } 
+    }    
+    @if $xs != null {
+        @include mobile-scr {
+            font-size: $xs + px;
+        } 
+    }
+}

@@ -1,0 +1,43 @@
+//
+// Colors
+//
+$white: 					#FFF;
+$black: 					#000;
+$darkBlue:					#194079;
+$lightBlue: 				#00D8FF;
+$formColor:					#95989A;
+$brandColor:                #0000DF;
+// Shades of gray
+$textOnWhite50:             #6C6C6C;
+$textOnDark30:              #BEBEBE;
+$productCard:               #151515;
+$tagBody:                   #E8E8E8;
+$tagText:                   #808080;
+$primaryGray:               #F5F5F5;
+
+//Shadows
+$smoothShadow:              5px 5px 5px rgba($color: #000000, $alpha: 0.15);
+$strongShadow:              3px 3px 3px rgba($color: #000000, $alpha: 0.15);
+
+//
+// Breakpoints
+//
+$smallMobileBreakpoint:     376px;
+$mobileBreakpoint: 			480px;
+$miniTabletBreakpoint:      541px;
+$tabletBreakpoint: 			850px;
+$computerBreakpoint: 		1024px;
+$largeMonitorBreakpoint: 	1200px;
+$extraLargeMonitorBreakpoint: 1400px;
+$widescreenBreakpoint: 		1920px;
+
+//
+// Font
+//
+$defaultFont: 'Campton';
+// Font weight
+$normal: normal;
+$bold: bold;
+$semiBold: 600;
+$medium: 500;
+$light: 300;

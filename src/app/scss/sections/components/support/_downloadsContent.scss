@@ -1,0 +1,328 @@
+.downloads {
+    &-content {
+        width: 100%;
+        height: auto;
+        @extend %flexColumn;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &-wrapper {
+        width: 100%;
+        border-top: solid 1px $textOnDark30;
+        border-bottom: solid 1px $textOnDark30;
+        padding: 30px 0 55px 0;
+        @extend %flexColumnCenterStart;
+        @include mini-tablet-scr {
+            padding: 40px 0;
+        }
+
+        &__title {
+            text-align: start;
+            font-size: 30px;
+            font-weight: $medium;
+            color: $black;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            width: 100%;
+            @include mobile-scr {
+                text-align: center;
+                margin: 0 0 40px 0;
+            }
+        }
+
+        &:nth-child(2) {
+            border-top: none;
+        }
+    }
+
+    &-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-start: auto;
+        grid-template-rows: auto;
+        column-gap: 4vw;
+        width: 100%;
+        @include mini-tablet-scr {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-option {
+        height: 235px;
+        padding: 60px 0;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 10px;
+        border-radius: 18px;
+        box-shadow: $smoothShadow;
+        background-color: $tagBody;
+        transition: all 0.2s ease-in-out;
+        justify-self: stretch;
+        @include mini-tablet-scr {
+            margin-bottom: 15px;
+        }
+
+        td {
+            font-size: 18px;
+            font-weight: $medium;
+            color: $black;
+            padding-bottom: 15px;
+        }
+
+        img {
+            padding-bottom: 15px;
+            height: 75px;
+            width: auto;
+            transition: inherit;
+            @include tablet-scr {
+                height: 60px;
+            }
+            @include mini-tablet-scr {
+                height: 75px;
+            }
+        }
+
+        p {
+            font-weight: $semiBold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 11px 23px 9px 23px;
+            color: $white;
+            background-color: #585858;
+            border: none;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            margin: 0;
+            @include tablet-scr {
+                padding: 6px 15px 6px 15px;
+            }
+            @include mini-tablet-scr {
+                padding: 8px 18px 7px 18px;
+            }
+        }
+    }
+
+    &-active {
+        background-color: $brandColor;
+
+        td {
+            color: $white;
+        }
+
+        img {
+            filter: grayscale(1) invert(1);
+        }
+
+        p {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    &-text {
+        position: relative;
+        width: 100%;
+        background-color: $tagBody;
+        margin-top: 65px;
+        padding: 65px 80px 0 80px;
+        border-radius: 18px;
+        box-shadow: $smoothShadow;
+        @include computer-scr {
+            padding: 50px 30px;
+        }
+        @include mini-tablet-scr {
+            padding: 50px 30px 130px 30px;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            table {
+                max-width: 45%;
+                min-width: 45%;
+                margin-bottom: 65px;
+                padding: 0 50px;
+                height: auto;
+                @include computer-scr {
+                    max-width: 46%;
+                    min-width: 46%;
+                }
+                @include mini-tablet-scr {
+                    max-width: 100%;
+                    min-width: 100%;
+                }
+
+                th {
+                    font-size: 25px;
+                    padding-bottom: 15px;
+                    text-transform: uppercase;
+                    font-weight: $bold;
+                    color: $brandColor;
+                    @include tablet-scr {
+                        font-size: 20px;
+                    }
+                }
+
+                tbody {
+                    text-align: start;
+                    border-top: 1px solid $tagText;
+
+                    .cta {
+                        @extend %ctaBranded;
+                    }
+                }
+
+                td {
+                    padding-top: 15px;
+                }
+
+                ol {
+                    list-style-type: decimal;
+                    padding-left: 20px;
+
+                    li {
+                        line-height: 26px;
+                        padding-left: 10px;
+                        font-size: 18px;
+                        font-weight: $normal;
+                        color: $black;
+                    }
+                }
+
+                ul {
+                    padding-left: 20px;
+
+                    li {
+                        position: relative;
+                        padding-left: 10px;
+                        line-height: 26px;
+                        font-size: 18px;
+                        font-weight: $normal;
+                        color: $black;
+
+                        &::before {
+                            content: '\e805';
+                            font-family: 'fontello';
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            left: -20px;
+                            color: $textOnDark30;
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__faq {
+            position: absolute;
+            bottom: 80px;
+            right: 4.85vw;
+            height: auto;
+            width: 425px;
+            text-decoration: none;
+            @include computer-scr {
+                width: 340px;
+                bottom: 50px;
+                right: 2.85vw;
+            }
+            @include tablet-scr {
+                width: 230px;
+                right: 0.85vw;
+                bottom: 25px;
+            }
+            @include mini-tablet-scr {
+                width: 350px;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+            @include mobile-scr {
+                width: 320px;
+            }
+
+            .icon {
+                height: 70px;
+                width: auto;
+                margin-right: 15px;
+                @include tablet-scr {
+                    height: 50px;
+                }
+            }
+
+            .title {
+                text-align: start;
+                font-size: 20px;
+                font-weight: $medium;
+                color: $black;
+                line-height: 23px;
+                margin-bottom: 7px;
+                @include tablet-scr {
+                    font-size: 16px;
+                    line-height: 17px;
+                }
+            }
+
+            .route {
+                font-size: 15px;
+                color: $brandColor;
+                font-weight: $medium;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.wide-table {
+    max-width: 70% !important;
+    width: 70%;
+    margin: auto auto 70px auto;
+    @include tablet-scr {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    tbody {
+        tr {
+            td {
+                display: flex;
+                justify-content: center;
+                a {
+                    @extend %ctaBranded;
+                }
+            }
+        }
+    }
+}
+
+.libraries {
+    thead {
+        th {
+            text-align: start;
+            text-transform: none !important;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(2) {
+                td {
+                    padding-top: 20px !important;
+                }
+            }
+        }
+    }
+}

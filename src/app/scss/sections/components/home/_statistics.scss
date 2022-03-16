@@ -1,0 +1,83 @@
+.statistics {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    margin-top: 100vh;
+    background-color: $white;
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 70px;
+    z-index: 5;
+    @include computer-scr {
+        margin-top: 90vh;
+    }
+    @include mini-tablet-scr {
+        padding-top: 60px;
+        padding-bottom: 50px;
+        margin-top: 85vh;
+    }
+
+    &-wrapper {
+        justify-content: space-between;
+        align-items: flex-start;
+        min-width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 75px;
+        @include mini-tablet-scr {
+            margin-bottom: 50px;
+        }
+        @include mobile-scr {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        table {
+            width: 33%;
+            height: auto;
+            @extend %flexColumnCenterStart;
+            @include mobile-scr {
+                margin-bottom: 50px;
+                width: 70%;
+            }
+    
+            img {
+                width: 160px;
+                height: auto;
+                margin-bottom: 40px;
+                @include tablet-scr {
+                    width: 130px;
+                    margin-bottom: 25px;
+                }
+                @include mini-tablet-scr {
+                    width: 120px;
+                }
+                @include mobile-scr {
+                    width: 150px;
+                    margin-bottom: 13px;
+                }
+            }
+    
+            td {
+                width: 180px;
+                text-align: center;
+                font-weight: normal;
+                line-height: 25px;
+                font-size: 20px;
+                color: $textOnWhite50;
+                @include tablet-scr {
+                    width: 150px;
+                }
+                @include mini-tablet-scr {
+                    width: 150px;
+                    font-size: 16px;
+                }
+                @include mobile-scr {
+                    width: 210px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

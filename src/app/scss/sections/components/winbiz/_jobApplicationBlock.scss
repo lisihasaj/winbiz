@@ -1,0 +1,123 @@
+.job-application {
+    position: relative;
+    overflow: hidden;
+    background-color: $black;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+
+    &__container {
+        padding: 110px 0;
+        @include computer-scr {
+            padding: 70px 0;
+        }
+    }
+
+    &__block-content {
+        margin-bottom: 30px;
+        width: 60%;
+        text-align: center;
+        @include computer-scr {
+            width: 70%;
+        }
+        @include tablet-scr {
+            width: 80%;
+        }
+        @include mini-tablet-scr {
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: $semiBold;
+            color: $white;
+            margin-bottom: 30px;
+            @include tablet-scr {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: $medium;
+            line-height: 26px;
+            color: $white;
+        }
+    }
+
+    &__cards {
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 65px;
+        @include tablet-scr {
+            margin-top: 25px;
+        }
+    
+        .card {
+            position: relative;
+            width: 31%;
+            height: auto;
+            @extend %flexRowCenterEnd;
+            @include computer-scr {
+                width: 32%;
+            }
+            @include tablet-scr {
+                width: 47%;
+                margin-top: 20px;
+            }
+            @include mini-tablet-scr {
+                width: 90%;
+            }
+    
+            &:hover {
+    
+                .card-box {
+                    transform: scaleY(1.05);
+                }
+            }
+    
+            &-box {
+                width: 100%;
+                height: 160px;
+                background-color: #f5f5f5;
+                height: 150px;
+                overflow: hidden;
+                box-shadow: $smoothShadow;
+                border-radius: 18px;
+                transform-origin: bottom center;
+                transition: all 0.2s ease-in-out;
+            }
+    
+            &-content {
+                position: absolute;
+                bottom: 20px;
+                left: 30px;
+            }
+    
+            &-tags {
+                .tag {
+                    text-align: center;
+                    background-color: $tagBody;
+                    padding: 10px 15px;
+                    border-radius: 7px;
+                    margin-right: 5px;
+                    color: $tagText;
+                    font-size: 12px;
+                    line-height: 12px;
+                    font-weight: $normal;
+                }
+            }
+    
+            &-title {
+                font-size: 15px;
+                font-weight: $medium;
+                color: $black;
+                margin-top: 20px;
+                text-transform: uppercase;
+                text-align: start;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.winbiz-statisctics {
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    background-color: $white;
+    margin-top: 850px;
+    @include computer-scr {
+        margin-top: 870px;
+    }
+    @include mobile-scr {
+        margin-top: 780px;
+    }
+
+    &__container {
+        align-items: flex-start;
+        text-align: start;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        @include computer-scr {
+            padding-top: 70px;
+            padding-bottom: 20px;
+        }
+        @include mobile-scr {
+            padding-top: 60px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: $bold;
+        color: $black;
+        margin-bottom: 55px;
+        @include tablet-scr {
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        @include mini-tablet-scr {
+            justify-content: center;
+        }
+
+        table {
+            border-top: 3px solid $brandColor;
+            margin-right: 8vw;
+            margin-bottom: 70px;
+            @include computer-scr {
+                margin-bottom: 50px;
+            }
+            @include tablet-scr {
+                width: 40%;
+                text-align: center;
+                margin: 0 4vw 50px 4vw;
+            }
+            @include mini-tablet-scr {
+                width: 80%;
+            }
+            @include mobile-scr {
+                width: 90%;
+            }
+        }
+
+        th {
+            padding-top: 30px;
+            padding-bottom: 20px;
+            @include tablet-scr {
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+            
+            h5 {
+                font-size: 20px;
+                font-weight: $medium;
+                color: $black;
+                @include xl-computer-scr {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        td {
+
+            h1 {
+                font-size: 100px;
+                font-weight: $bold;
+                color: $brandColor;
+                @include xl-computer-scr {
+                    font-size: 80px;
+                }
+                @include tablet-scr {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+
+    .blue-section {
+        height: 695px;
+        width: 100%;
+        background-color: $brandColor;
+        @extend %coverCenter;
+        background-position: 50% 25%;
+        @include computer-scr {
+            height: 480px;
+        }
+        @include tablet-scr {
+            height: 400px;
+        }
+    }
+}

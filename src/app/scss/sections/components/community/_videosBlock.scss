@@ -1,0 +1,194 @@
+.videos-block {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 95px 0;
+    z-index: 5;
+    background-color: $primaryGray;
+    @include tablet-scr {
+        padding: 80px 0;
+    }
+    @include mini-tablet-scr {
+        padding: 60px 0;
+    }
+
+    &-container {
+        width: 100%;
+        height: auto;
+    }
+
+    &-heading {
+        width: 100%;
+
+        &__title {
+            text-align: start;
+            text-transform: uppercase;
+            font-size: 35px;
+            font-weight: $bold;
+            margin-bottom: 20px;
+            color: $black;
+            width: 100%;
+            @include computer-scr {
+                font-size: 30px;
+            }
+        }
+
+        &__results {
+            width: 100%;
+            text-align: end;
+            font-size: 20px;
+            font-weight: $normal;
+            padding: 5px 0;
+            margin-bottom: 30px;
+            color: $tagText;
+            border-bottom: 1px solid $tagBody;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        @include xl-computer-scr {
+            justify-content: flex-start;
+        }
+        @include computer-scr {
+            margin-top: 60px;
+        }
+
+        .item {
+            &-wrapper {
+                width: 25%;
+                height: auto;
+                margin-bottom: 65px;
+                padding: 0 10px;
+                cursor: pointer;
+                @include computer-scr {
+                    width: 33%;
+                    margin-bottom: 35px;
+                }
+                @include tablet-scr {
+                    width: 50%;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                }
+            }
+
+            &-video {
+                position: relative;
+                overflow: hidden;
+                border-radius: 9px;
+                height: 185px;
+                width: 100%;
+                box-shadow: $smoothShadow;
+                margin-bottom: 20px;
+                background-color: $brandColor;
+
+                .icon {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 2;
+                }
+
+                .image {
+                    margin-top: 50px;
+                    height: 330px;
+                    width: auto;
+                    transition: all 0.2s ease-in-out;
+                    z-index: 1;
+                }
+
+                .duration {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 12px;
+                    font-weight: $light;
+                    color: $black;
+                    padding: 10px 15px;
+                    background-color: $tagBody;
+                    border-radius: 7px;
+                    z-index: 2;
+                    
+                }
+
+                &:hover {
+                    .image {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            &-elements {
+                width: 100%;
+                height: auto;
+            }
+
+            &-date {
+                font-size: 12px;
+                font-weight: $normal;
+                color: $tagText;
+                margin-bottom: 10px;
+            }
+
+            &-title {
+                width: 100%;
+                height: auto;
+                font-weight: $medium;
+                width: 100%;
+                height: auto;
+                font-size: 18px;
+                color: $black;
+                line-height: 22px;
+                text-align: start;
+                margin-bottom: 10px;
+            }
+
+            &-tags {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                @include lg-computer-scr {
+                    flex-wrap: wrap;
+                }
+            }
+
+            &-tag {
+                font-size: 12px;
+                font-weight: $light;
+                color: $tagText;
+                padding: 10px 15px;
+                background-color: $tagBody;
+                border-radius: 7px;
+                margin-right: 10px;
+                @include lg-computer-scr {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    &__show-more {
+        background-color: #EAEAEA;
+        font-size: 18px;
+        font-weight: $medium;
+        color: $tagText;
+        padding: 12px 25px;
+        box-shadow: $smoothShadow;
+        border: none;
+        border-radius: 9px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: $black;
+            box-shadow: $strongShadow;
+        }
+    }
+}

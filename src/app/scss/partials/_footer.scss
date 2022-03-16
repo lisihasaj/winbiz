@@ -1,0 +1,245 @@
+#footer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: $black;
+    z-index: 10;
+    
+    //Contact block stilized separately as a component
+
+}
+
+.footer {
+
+    &__content {
+        position: relative;
+        padding: 65px 0 0 0;
+        border-top: solid 1px $tagText;
+        
+        .logo {
+            @extend %flexColumnEndStart;
+            cursor: pointer;
+
+            .logo-svg {
+                height: 70px;
+                width: auto;
+                transition: height 0.3s;
+                path {
+                    fill: $white;
+                }
+                @include mini-tablet-scr {
+                    height: 60px;
+                }
+            }
+    
+            .logo-meta {
+                position: relative;
+                text-align: right;
+                margin-right: 10px;
+                margin-top: 40px;
+                padding-bottom: 100px;
+                color: $tagText;
+                text-transform: uppercase;
+                @include mini-tablet-scr {
+                    margin-top: 30px;
+                }
+
+                p {
+                    @include mini-tablet-scr {
+                        font-size: 14px;
+                    }
+                }
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    background: transparent;
+                    border-style: solid;
+                    border-color: $brandColor;
+                    border-width: 19px 15px;
+                    border-color: $brandColor $brandColor transparent transparent;
+                    @include mini-tablet-scr {
+                        top: 70px;
+                        border-width: 15px 11px;
+                    }
+                }
+            }
+        }
+
+        .text-details {
+            text-align: start;
+
+            &__address-wrapper {
+                flex-wrap: wrap;
+                padding: 0;
+                @include tablet-scr {
+                    padding-right: 50px;
+                }
+            }
+
+            &__address {
+                margin-bottom: 60px;
+                @include mobile-scr {
+                    margin-bottom: 30px;
+                }
+
+                &-title {
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: $medium;
+                    margin-bottom: 20px;
+                }
+
+                table {
+                    width: 20%;
+                    @include mini-tablet-scr {
+                        width: 45%;
+                        margin-bottom: 30px;
+                    }
+                    @include mobile-scr {
+                        width: 90%;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        color: $tagBody;
+                        font-size: 14px;
+                        font-weight: $normal;
+                        line-height: 19px;
+                        @include mini-tablet-scr {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                p {
+                    width: 20%;
+                    color: $tagBody;
+                    font-size: 14px;
+                    font-weight: $normal;
+                    line-height: 19px;
+                    @include mini-tablet-scr {
+                        font-size: 12px;
+                        width: 45%;
+                    }
+                    @include mobile-scr {
+                        width: 90%;
+                    }
+                }
+            }
+
+            &__link {
+                margin-bottom: 70px;
+                @include mobile-scr {
+                    margin-bottom: 40px;
+                    min-width: 375px !important;
+                }
+                @include small-mobile-scr {
+                    min-width: 325px !important;
+                }
+
+                &-title {
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: $medium;
+                    margin-bottom: 20px;
+                }
+
+                &-section {
+                    margin-bottom: 10px;
+
+                    &__item {
+                        width: 20%;
+                        margin: 0;
+                        padding: 0;
+                        text-decoration: none;
+                        font-size: 15px;
+                        font-weight: $medium;
+                        color: $white;
+                        @include mobile-scr {
+                            width: 21%;
+                        }
+                        
+                        &:nth-child(1) {
+                            @include mobile-scr {
+                                width: 15%;
+                            }
+                        }
+                    }
+                }
+
+                &-group {
+                    width: 20%;
+                    @include mobile-scr {
+                        width: 21%;
+                    }
+
+                    &:nth-child(1) {
+                        @include mobile-scr {
+                            width: 15%;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        width: fit-content;
+                        position: relative;
+                        cursor: pointer;
+                        color: $tagBody;
+                        font-size: 12px;
+                        font-weight: $normal;
+                        line-height: 18px;
+                        overflow: hidden;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 1px;
+                            left: -101%;
+                            height: 0.5px;
+                            width: 100%;
+                            background-color: $tagBody;
+                            transition: all 0.2s ease;
+                        }
+
+                        &:hover {
+                            &::after {
+                               transform: translateX(100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__endnotes {
+        min-height: 50px;
+        @extend %flexCenter;
+        text-align: center;
+        @include mobile-scr {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 60px;
+        }
+
+        .endnote {
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 30px;
+            font-weight: $normal;
+            color: $tagBody;
+            @include mobile-scr {
+                margin: 7px 0 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.download-app-block {
+    position: relative;
+    width: 100%;
+    height: 634px;
+    //height: 100vh;
+    z-index: 5;
+    background-color: $black;
+    @extend %coverCenter;
+    @include lg-computer-scr {
+        background-position: 100% 30%;
+        height: 95vh;
+    }
+    @include computer-scr {
+        height: 85vh;
+        background-position: 30% 30%;
+    }
+    @include mini-tablet-scr {
+        height: 60vh;
+        background-position: 45% 50%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(200deg, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0) 100%);
+        z-index: 1;
+    }
+
+    .container--lg {
+        z-index: 3;
+    }
+
+    &__content {
+        width: 50%;
+        padding: 130px 0;
+        height: auto;
+        @include xl-computer-scr {
+            padding: 70px 0;
+            width: 50%;
+        }
+        @include lg-computer-scr {
+            width: 60%;
+        }
+        @include tablet-scr {
+            width: 100%;
+        }
+        @include mini-tablet-scr {
+            padding: 60px 0;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        p {
+            position: relative;
+            text-align: start;
+            text-transform: uppercase;
+            font-size: 56px;
+            font-weight: $bold;
+            color: white;
+            margin-bottom: 50px;
+            @include computer-scr {
+                font-size: 50px;
+            }
+            @include mini-tablet-scr {
+                font-size: 35px;
+                margin-bottom: 35px;
+            }
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: -100px;
+                left: 0;
+                background: transparent;
+                border-style: solid;
+                border-width: 19px 15px;
+                border-color: $brandColor transparent transparent $brandColor;
+                @include xl-computer-scr {
+                    top: -70px;
+                }
+                @include mini-tablet-scr {
+                    border-width: 15px 11px;
+                }
+            }
+        }
+    }
+}
+
+.product-section {
+    height: 634px;
+    //height: 95vh;
+    background-position: 50% 25%;
+    @include lg-computer-scr {
+        background-position: 45% 30%;
+    }
+    @include computer-scr {
+        background-position: 50% 30%;
+    }
+
+    .download-app-block__content {
+        padding: 100px 0;
+    }
+}
+
+.support-section {
+    height: 634px;
+    background-position: 80% 20%;
+    @include tablet-scr {
+        background-position: 50% 0%;
+    }
+    @include mini-tablet-scr {
+        background-position: 41% 0%;
+    }
+
+    .download-app-block__content {
+        padding: 100px 0;
+        margin-left: auto;
+    }
+}

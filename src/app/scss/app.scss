@@ -1,0 +1,187 @@
+// SWIPER
+@import '~swiper/css/swiper.css';
+
+// UTILS
+@import "./utils/index";
+
+// BASE
+@import './base/index';
+
+// COMPONENTS
+@import './components/index';
+
+// PARTIALS
+@import './partials/index';
+
+// LAYOUT
+@import './layout/index';
+
+// SECTIONS
+@import './sections/index';
+
+// SUBSECTIONS
+@import './subsections/index';
+
+//AOS
+@import './aos-animations/index';
+
+
+body {
+	font-family: $defaultFont;
+	@extend %normalFont !optional;
+	background-color: $black;
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+* {
+	font-family: 'Campton'
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@extend %semiBoldFont;
+}
+
+.backdrop-layer {
+	position: fixed;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.3);
+	z-index: 9;
+}
+
+main {
+	padding: 0 0;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	min-height: 94vh;
+	z-index: 0;
+}
+
+input {
+    border-radius: 0 !important;
+}
+
+.not-found-page {
+	width: 100%;
+	height: 100vh;
+	background-color: $black;
+
+	h1 {
+		color: $white;
+		font-size: 40px;
+		font-weight: $bold;
+		margin-bottom: 50px;
+	}
+
+	a {
+		color: $white;
+		font-size: 22px;
+		font-weight: $normal;
+	}
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.faq {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//Custom loading keyframes
+
+@keyframes triangle1 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes triangle2 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes triangle3 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes triangle4 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+//Form loading submition animation
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.icon-container {
+    animation: rotation 2s linear infinite;
+
+    .icon {
+        color: $brandColor;
+        font-size: 24px;
+    }
+}
+
+//After form submition
+.disabled-form {
+    pointer-events: none !important;
+    opacity: 0.5;
+}
+
+img[lazy=loading] {
+    opacity: 0;
+}
+img[lazy=loaded] {
+    opacity: 1;
+    transition: opacity 0.3s;
+}

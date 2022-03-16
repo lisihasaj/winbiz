@@ -1,0 +1,55 @@
+.partners {
+    position: relative;
+    overflow: hidden;
+    background-color: $black;
+    padding: 105px 0 90px 0;
+    z-index: 5;
+    @include mini-tablet-scr {
+        padding: 60px 0;
+    }
+    @include mobile-scr {
+        padding: 60px 0 10px 0;
+    }
+
+    &__wrapper {
+        @extend %flexColumnCenterStart;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 40;
+        font-weight: $bold;
+        color: $white;
+        margin-bottom: 83px;
+        @include mini-tablet-scr {
+            font-size: 35px;
+        }
+    }
+
+    &__logos {
+        flex-wrap: wrap;
+        align-items: center;
+
+        &-wrapper {
+            width: 25%;
+            height: auto;
+            margin-bottom: 65px;
+            @extend %flexCenter;
+            @include mobile-scr {
+                width: 30%;
+            }
+
+            .logo {
+                @include computer-scr {
+                    width: 120px;
+                }
+                @include mini-tablet-scr {
+                    width: 90px;
+                }
+                @include mobile-scr {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.partnership {
+    &-modal {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 810px;
+        height: fit-content;
+        z-index: 10;
+        background-color: $tagBody;
+        border-radius: 20px;
+        box-shadow: $smoothShadow;
+        padding-bottom: 60px;
+        @include computer-scr {
+            width: 700px;
+        }
+        @include tablet-scr {
+            width: 520px;
+        }
+        @include mini-tablet-scr {
+            width: 460px;
+        }
+        @include mobile-scr {
+            width: 360px;
+        }
+
+        &__header {
+            width: 100%;
+            height: 70px;
+            padding: 0 30px;
+
+            .cancel {
+                &-button {
+                    cursor: pointer;
+                    padding: 12px 0;
+                }
+
+                &-icon {
+                    position: relative;
+                    height: 2px;
+                    width: 25px;
+                    background-color: $black;
+                    transform: rotate(45deg);
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        height: 2px;
+                        width: 25px;
+                        transform: rotate(-90deg);
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            width: 100%;
+            height: auto;
+
+            .modal {
+                &__title {
+                    font-size: 35px;
+                    text-align: center;
+                    font-weight: $semiBold;
+                    color: $brandColor;
+                    margin-bottom: 20px;
+                    @include mini-tablet-scr {
+                        font-size: 25px;
+                    }
+                    @include mini-tablet-scr {
+                        width: 90%;
+                    }
+                }
+
+                &__subtitle {
+                    font-size: 15px;
+                    width: 60%;
+                    font-weight: $medium;
+                    line-height: 22px;
+                    color: $black;
+                    margin-bottom: 45px;
+                    @include tablet-scr {
+                        width: 90%;
+                    }
+                }
+
+                &__radios-title {
+                    font-size: 15px;
+                    font-weight: $medium;
+                    color: $black;
+                    margin-bottom: 10px;
+                }
+
+                &__radios-wrapper {
+                    width: fit-content;
+                    height: auto;
+                    text-align: start;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}

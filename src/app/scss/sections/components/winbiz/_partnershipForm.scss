@@ -1,0 +1,262 @@
+
+// All the components nested in PartnershipForm, are styled in this file.
+.partnership-form {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: $white;
+
+    &__container {
+        padding-top: 70px;
+        @include mini-tablet-scr {
+            padding-top: 60px;
+        }
+
+        .form {
+            &-one {
+                padding-bottom: 70px;
+                @include mini-tablet-scr {
+                    padding-bottom: 60px;
+                }
+
+                &__wrapper {
+                    width: 100%;
+                    height: auto;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    :nth-child(3),
+                    :nth-child(4) {
+                        width: 100%;
+                    }
+                }
+
+                &__input {
+                    @include tablet-scr {
+                        width: 100%;
+                    }
+                }
+
+                &__disabled {
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+            }
+
+            &-two {
+                padding-bottom: 70px;
+                border-top: 1px solid $tagBody;
+
+                &__wrapper {
+                    width: 100%;
+                    height: auto;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
+                &__input {
+                    @include tablet-scr {
+                        width: 100%;
+                    }
+                }
+
+                &__disabled {
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+            }
+
+            &-three {
+                padding-bottom: 70px;
+                border-top: 1px solid $tagBody;
+
+                &__wrapper {
+                    width: 100%;
+                    height: auto;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
+                &__sorter {
+                    margin-bottom: 25px;
+                }
+
+                &__input,
+                &__sorter {
+                    @include tablet-scr {
+                        width: 100%;
+                    }
+                }
+
+                &__radios {
+                    width: 100%;
+                    padding: 0 15px;
+                    text-align: start;
+                    margin-bottom: 30px;
+                    margin-top: 15px;
+
+                    &-title {
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: $normal;
+                        color: $black;
+                        padding: 0;
+                        margin-bottom: 25px;
+                    }
+
+                    &-wrapper {
+                        flex-wrap: wrap;
+                        width: 100%;
+                        align-items: center;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                    }
+
+                    &-item {
+                        width: 25%;
+                        justify-content: flex-start;
+                        font-size: 18px;
+                        font-weight: $normal;
+                        margin-bottom: 10px;
+                        @include mini-tablet-scr {
+                            width: 33%;
+                        }
+                        @include mobile-scr {
+                            width: 48%;
+                        }
+
+                        &__radio {
+                            width: 21px;
+                            height: 21px;
+                            border-radius: 20px;
+
+                            &::after {
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 15px;
+                            }
+                        }
+                    }
+
+                    &-others {
+                        width: 60%;
+                        justify-content: flex-start;
+                        align-items: center;
+                        border-bottom: 1px solid $tagBody;
+                        @include mini-tablet-scr {
+                            width: 100%;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            background: transparent;
+                            border: none;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+
+                &-error {
+                    font-size: 12px;
+                    color: red;
+                    font-weight: $normal;
+                    margin: 5px 0 0 15px;
+                    text-align: start;
+                }
+
+                &__disabled {
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+
+                &-captcha {
+                    width: 100%;
+                }
+            }
+
+            &__title {
+                text-align: center;
+                margin-bottom: 50px;
+
+                h2 {
+                    font-size: 25px;
+                    font-weight: $bold;
+                    color: $black;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: $normal;
+                    color: $tagText;
+                    font-style: italic;
+                }
+            }
+
+            &__button {
+                width: 100%;
+                @include mini-tablet-scr {
+                    margin-top: 20px;
+                }
+
+                .validation {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+
+                    &-hidden {
+                        display: none;
+                    }
+
+                    p {
+                        text-transform: uppercase;
+                        line-height: 0px;
+                        color: $brandColor;
+                        font-size: 17px;
+                        font-weight: $semiBold;
+                        margin-right: 15px;
+                    }
+
+                    .icon-shown {
+                        display: inherit;
+                        color: $brandColor;
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            &__disabler {
+                width: 100%;
+                height: fit-content;
+                justify-content: flex-start;
+                margin-top: 18px;
+                margin-bottom: 25px;
+        
+                span {
+                    position: relative;
+                    color: $brandColor;
+                    font-size: 15px;
+                    font-weight: $medium;
+                    padding-left: 25px;
+                    cursor: pointer;
+        
+                    &::before {
+                        content: '\e802';
+                        position: absolute;
+                        font-family: 'fontello';
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        left: 0;
+                        color: $brandColor;
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

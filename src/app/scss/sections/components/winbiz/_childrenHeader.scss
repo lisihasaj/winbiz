@@ -1,0 +1,97 @@
+.children-header {
+    position: relative;
+    overflow: hidden;
+    background-color: $black;
+    height: 546px;
+    width: 100%;
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        @include tablet-scr {
+            height: 55%;
+        }
+        @include mini-tablet-scr {
+            height: 60%;
+        }
+    }
+
+    &__content {
+        text-align: center;
+        width: 100%;
+
+        h1 {
+            font-size: 40px;
+            font-weight: $bold;
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 15px;
+            @include tablet-scr {
+                font-size: 35px;
+                width: 80%;
+            }
+            @include mini-tablet-scr {
+                width: 90%;
+            }
+            @include mobile-scr {
+                width: 100%;
+                font-size: 30px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: $medium;
+            line-height: 25px;
+            color: $white;
+            width: 50%;
+            @include tablet-scr {
+                width: 80%;
+            }
+            @include mini-tablet-scr {
+                width: 90%;
+            }
+            @include mobile-scr {
+                width: 100%;
+            }
+        }
+    }
+
+    &__return {
+        position: absolute;
+        z-index: 9;
+        bottom: 40px;
+        left: 15px;
+        right: 0;
+        margin: auto;
+        height: fit-content;
+        width: 100%;
+        @include mobile-scr {
+            left: 5px;
+        }
+
+        .back-btn {
+            width: fit-content;
+            position: relative;
+            color: $white;
+            text-decoration: none;
+            padding-left: 30px;
+            font-size: 15px;
+            font-weight: $medium;
+            @extend %flexRowStartCenter;
+
+            &::before {
+                content: '\e800';
+                position: absolute;
+                font-family: 'fontello';
+                top: -3px;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                color: $white;
+                font-size: 18px;
+            }
+        }
+    }
+}

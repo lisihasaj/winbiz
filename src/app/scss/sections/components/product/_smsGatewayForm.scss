@@ -1,0 +1,71 @@
+.sms-gateway-form {
+    width: 100%;
+    position: relative;
+    @extend %flexCenter;
+    padding: 0 0 110px 0;
+
+    &__card {
+        background-color: #f1f1f1;
+        box-shadow: $smoothShadow;
+        height: fit-content;
+        border-radius: 18px;
+        padding: 45px 40px;
+        width: 45%;
+        @include lg-computer-scr {
+            padding: 30px 30px;
+            width: 70%;
+        }
+        @include computer-scr {
+            width: 80%;
+        }
+        @include tablet-scr {
+            width: 90%;
+        }
+        @include tablet-scr {
+            margin-bottom: 20px;
+        }
+        @include mini-tablet-scr {
+            width: 95%;
+        }
+        @include mobile-scr {
+            padding: 30px 10px;
+        }
+    }
+
+    &__form-wrapper {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__form-input {
+        width: 100%;
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            width: 49%;
+            @include tablet-scr {
+                width: 100%;
+            }
+        }
+    }
+
+    &__form--tc-note {
+        width: 60%;
+        font-size: 12px;
+        font-weight: $normal;
+        font-style: italic;
+        color: $tagText;
+        margin-bottom: 22px;
+        margin-top: 25px;
+        text-align: center;
+        @include mini-tablet-scr {
+            width: 100%;
+        }
+
+        .link {
+            text-decoration: none;
+            color: $brandColor;
+        }
+    }
+}

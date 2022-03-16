@@ -1,0 +1,117 @@
+.temporary {
+    &-cards {
+        width: 100%;
+        padding: 60px 0;
+        border-bottom: 1px solid $tagBody;
+        @include mini-tablet-scr {
+            padding: 50px 0;
+        }
+
+        &__container {
+            width: 100%;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include mobile-scr {
+                justify-content: center;
+            }
+
+            .card {
+                position: relative;
+                width: 32%;
+                height: 320px;
+                margin-bottom: 15px;
+                user-select: none;
+                @include tablet-scr {
+                    width: 47%;
+                    margin-bottom: 25px;
+                }
+                @include mini-tablet-scr {
+                    width: 49%;
+                }
+                @include mobile-scr {
+                    width: 90%;
+                }
+
+                &__wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 18px;
+                    background-color: $tagBody;
+                    box-shadow: $smoothShadow;
+                    border-width: 3px;
+                    border-style: solid;
+                    border-color: transparent;
+                    cursor: pointer;
+                    padding: 10%;
+                    transition: all 0.2s ease;
+                    z-index: 2;
+
+                    &:hover {
+                        border-color: $brandColor;
+                    }
+
+                    h6 {
+                        position: absolute;
+                        top: 17%;
+                        right: 10%;
+                        text-align: center;
+                        font-size: 18px;
+                        height: fit-content;
+                        width: 80%;
+                        font-weight: $medium;
+                        color: $brandColor;
+                        @include computer-scr {
+                            right: 5%;
+                        }
+                        @include tablet-scr {
+                            right: 10%;
+                        }
+                    }
+                }
+
+                &__description {
+                    width: 100%;
+
+                    p {
+                        position: absolute;
+                        top: 10%;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: auto;
+                        height: fit-content;
+                        width: 85%;
+                        line-height: 20px;
+                        font-size: 16px;
+                        font-weight: $medium;
+                        color: $tagText;
+                        text-align: center;
+                    }
+                }
+
+                &__input {
+                    position: absolute;
+                }
+
+                &__link {
+                    position: absolute;
+                    bottom: 10%;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: $medium;
+                    color: $brandColor;
+                }
+
+                .active {
+                    border-color: $brandColor;
+                }
+            }
+        }
+    }
+}

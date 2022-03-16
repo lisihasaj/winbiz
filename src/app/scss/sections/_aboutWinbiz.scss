@@ -1,0 +1,19 @@
+.about-winbiz {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+}
+
+.blur-filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    backdrop-filter: blur(5px);
+    z-index: 9;
+}

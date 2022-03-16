@@ -1,0 +1,221 @@
+.home-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+
+    .swiper {
+        position: relative;
+
+        &__item {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            @extend %coverTop;
+            @extend %flexColumnCenterEnd;
+            @include computer-scr {
+                background-position: 70% 30%;
+                height: 90vh;
+            }
+            @include mini-tablet-scr {
+                height: 85vh;
+                background-position: 70% 30%;
+            }
+
+            .content {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                z-index: 4;
+                @include xl-computer-scr {
+                    height: 500px;
+                }
+                @include computer-scr {
+                    height: 54%;
+                }
+                @include mini-tablet-scr {
+                    justify-content: space-between;
+                    height: 59%;
+                }
+                @media (max-height: 650px) {
+                    height: 430px;
+                }
+
+                &__left {
+                    width: 60%;
+                    @extend %flexColumnStartCenter;
+                    position: relative;
+                    z-index: 4;
+                    &-title {
+                        width: auto;
+                        height: auto;
+                        h1 {
+                            color: $white;
+                            width: 675px;
+                            height: auto;
+                            text-transform: uppercase;
+                            padding: 0;
+                            text-align: start;
+                            font-size: 74px;
+                            line-height: 70px;
+                            font-weight: $bold;
+                            margin-bottom: 25px;
+                            @include lg-computer-scr {
+                                font-size: 65px;
+                                line-height: 66px;
+                            }
+                            @include computer-scr {
+                                font-size: 50px;
+                                line-height: 51px;
+                                width: 500px;
+                            }
+                            @include mini-tablet-scr {
+                                font-size: 40px;
+                                line-height: 41px;
+                                width: 350px;
+                            }
+                            @include mobile-scr {
+                                font-size: 34px;
+                                line-height: 35px;
+                                width: 310px;
+                                margin-bottom: 13px;
+                            }
+                            @media (max-height: 750px) {
+                                font-size: 45px;
+                                line-height: 45px;
+                            }
+                        }
+                    }
+
+                    &-subtitle {
+                        color: $tagBody;
+                        width: 320px;
+                        text-align: start;
+                        font-weight: $normal;
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-top: 25px;
+                        margin-bottom: 35px;
+                        @include mini-tablet-scr {
+                            margin-top: 10px;
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                        @include mobile-scr {
+                            width: 195px;
+                            margin-top: 0;
+                        }
+                    }
+                    .cta {
+                        position: relative;
+                        z-index: 9;
+                    }
+                }
+
+                &__right {
+                    width: 30%;
+                    display: flex;
+                    height: 100%;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: space-around;
+
+                    &-title {
+                        p {
+                            color: $white;
+                            width: 190px;
+                            border-top: 0.5px solid $white;
+                            padding-top: 20px;
+                            height: auto;
+                            text-align: end;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            line-height: 20px;
+                            font-weight: $medium;
+                            margin-top: 100px;
+                            @include mini-tablet-scr {
+                                font-size: 12px;
+                                line-height: 18px;
+                                padding-top: 15px;
+                                width: 150px;
+                            }
+                            @include mobile-scr {
+                                width: 130px;
+                                line-height: 16px;
+                                margin-top: 130px;
+                            }
+                        }
+                    }
+
+                    &-badge {
+                        width: 120px;
+                        height: auto;
+                        @include mini-tablet-scr {
+                            width: 90px;
+                        }
+                        @include mobile-scr {
+                            width: 80px;
+                        }
+                    }
+                }
+
+                &__slider-pagination {
+                    flex-direction: row;
+                    @extend %flexRowStartCenter;
+                    height: auto;
+                    width: auto;
+
+                    .swiper {
+                        &-button-next,
+                        &-button-prev {
+                            position: unset;
+                            width: auto;
+                            height: auto;
+
+                            &::after {
+                                color: $textOnDark30;
+                                font-size: 15px;
+                                @include mini-tablet-scr {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        &-button {
+                            &-next {
+                                margin-left: 15px;
+                            }
+
+                            &-prev {
+                                margin-right: 15px;
+                            }
+                        }
+
+                        &-pagination {
+                            position: unset;
+                            height: 3px;
+                            border-radius: 3px;
+                            width: 122px;
+                            background-color: $textOnDark30;
+                            margin-bottom: 22px;
+
+                            &-progressbar-fill {
+                                background-color: $white;
+                                border-radius: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

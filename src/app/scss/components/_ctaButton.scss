@@ -1,0 +1,28 @@
+.cta {
+    font-weight: $semiBold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 11px 23px 9px 23px;
+    color: $white;
+    background-color: $brandColor;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    @include mini-tablet-scr {
+        padding: 8px 18px 7px 18px;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: lighten($brandColor, 10%);
+    }
+
+    &-disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+}
+

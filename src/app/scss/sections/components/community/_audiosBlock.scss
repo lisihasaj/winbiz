@@ -1,0 +1,178 @@
+.audio-block {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding: 85px 0 100px 0;
+    background-color: $white;
+    z-index: 5;
+    @include computer-scr {
+        padding: 80px 0;
+    }
+    @include mini-tablet-scr {
+        padding: 60px 0 50px 0;
+    }
+
+    &-container {
+        width: 100%;
+        height: auto;
+        text-align: start;
+    }
+
+    &__title {
+        width: 100%;
+        color: $black;
+        font-size: 35px;
+        font-weight: $bold;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-align: start;
+        @include tablet-scr {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__items-title {
+        font-size: 20px;
+        font-weight: $medium;
+        text-transform: uppercase;
+        color: $tagText;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .swiper {
+        margin-right: 0;
+        margin-left: auto;
+        padding: 15px 0 15px 15px;
+
+        &__item {
+
+            .audio {
+                &-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+
+                    .image-wrapper {
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 18px;
+                        border: 10px solid $tagText;
+                        max-width: 216px;
+                        max-height: 216px;
+                        margin-right: 20px;
+                        box-shadow: $smoothShadow;
+                        background-color: $tagText;
+                        @include mobile-scr {
+                            margin-right: 10px;
+                        }
+    
+                        .icon {
+                            position: absolute;
+                            bottom: 20px;
+                            left: 20px;
+                        }
+    
+                        .image {
+                            margin-top: auto;
+                            height: 230px;
+                            width: auto;
+                        }
+                    }
+
+                    .elements-wrapper {
+                        width: auto;
+                        text-align: start;
+                        width: 50%;
+                        margin-bottom: 5px;
+                        @include mobile-scr {
+                            padding-right: 10px;
+                        }
+
+                        .duration {
+                            font-size: 12px;
+                            font-weight: $normal;
+                            color: $tagText;
+                            margin-bottom: 10px;
+                        }
+
+                        .title {
+                            margin-bottom: 10px;
+                            p {
+                                width: 100%;
+                                font-size: 20px;
+                                font-weight: $medium;
+                                color: $black;
+                            }
+                            @include mobile-scr {
+                                font-size: 17px;
+                            }
+                        }
+
+                        .date {
+                            padding: 10px 15px;
+                            border-radius: 7px;
+                            width: fit-content;
+                            background-color: $tagBody;
+                            color: $tagText;
+                            font-size: 12px;
+                            font-weight: $normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__slider-pagination {
+        margin-top: 30px;
+        flex-direction: row;
+        @extend %flexRowStartCenter;
+        height: auto;
+        width: auto;
+
+        .swiper {
+            &-button-next,
+            &-button-prev {
+                position: unset;
+                width: auto;
+                height: auto;
+
+                &::after {
+                    color: $brandColor;
+                    font-size: 15px;
+                    @include mini-tablet-scr {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &-button {
+                &-next {
+                    margin-left: 15px;
+                }
+
+                &-prev {
+                    margin-right: 15px;
+                }
+            }
+
+            &-pagination {
+                position: unset;
+                height: 3px;
+                border-radius: 3px;
+                width: 220px;
+                background-color: #ababec;
+                margin-bottom: 22px;
+
+                &-progressbar-fill {
+                    background-color: $brandColor;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.app-accessibility-block {
+    position: relative;
+    overflow: hidden;
+    background-color: $white;
+    z-index: 5;
+
+    &__wrapper {
+        width: auto;
+        padding: 65px 0;
+        @include mini-tablet-scr {
+            padding: 60px 0;
+        }
+    }
+
+    &__content {
+        
+        table {
+            width: 100%;
+
+            h1 {
+                font-weight: $bold;
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 60px;
+                @include mini-tablet-scr {
+                    font-size: 35px;
+                    margin-bottom: 30px;
+                }
+                @include mobile-scr {
+                    font-size: 30px;
+                }
+            }
+        
+            img {
+                width: 800px;
+                height: auto;
+                margin-bottom: 60px;
+                @include computer-scr {
+                    width: 700px;
+                }
+                @include mini-tablet-scr {
+                    margin-bottom: 40px;
+                    width: 400px;
+                }
+                @include mobile-scr {
+                    width: 335px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.partners-block {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: $white;
+    z-index: 5;
+
+    &__container {
+        padding-top: 130px;
+        padding-bottom: 100px;
+        @include computer-scr {
+            padding: 70px 0;
+        }
+        @include mobile-scr {
+            padding: 60px 0;
+        }
+    }
+
+    &__content {
+        margin-bottom: 30px;
+        width: 55%;
+        @include computer-scr {
+            width: 70%;
+        }
+        @include tablet-scr {
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: $semiBold;
+            color: $black;
+            margin-bottom: 30px;
+            @include tablet-scr {
+                font-size: 40px;
+            }
+            @include mobile-scr {
+                font-size: 35px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: $medium;
+            line-height: 26px;
+            color: $tagText;
+            @include mobile-scr {
+                font-size: 18px;
+            }
+        }
+    }
+}

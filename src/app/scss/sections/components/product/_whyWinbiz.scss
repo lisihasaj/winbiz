@@ -1,0 +1,112 @@
+.why-winbiz {
+    position: relative;
+    overflow: hidden;
+    padding: 108px 0 150px 0;
+    background-color: $white;
+    width: 100%;
+    z-index: 5;
+    margin-top: 850px;
+    @include computer-scr {
+        margin-top: 870px;
+    }
+    @include tablet-scr {
+        padding: 70px 0 30px 0;
+    }
+    @include mini-tablet-scr {
+        padding-bottom: 20px;
+    }
+    @include mobile-scr {
+        padding: 60px 0 10px 0;
+        margin-top: 780px;
+    }
+
+    &-container {
+        .title {
+            font-size: 40px;
+            color: $black;
+            font-weight: $bold;
+            margin-bottom: 115px;
+            @include tablet-scr {
+                margin-bottom: 70px;
+            }
+            @include mini-tablet-scr {
+                margin-bottom: 50px;
+                width: 90%;
+            }
+        }
+
+        &__reasons {
+            height: auto;
+            flex-wrap: wrap;
+            text-align: center;
+            @include tablet-scr {
+                flex-wrap: wrap;
+            }
+
+            table,
+            tbody,
+            tr,
+            td {
+                @extend %flexColumnCenterStart;
+            }
+
+            table {
+                width: 23%;
+                height: auto;
+                @include tablet-scr {
+                    width: 50%;
+                    margin-bottom: 50px;
+                }
+                @include mini-tablet-scr {
+                    width: 100%;
+                    margin-bottom: 60px;
+                }
+
+                img {
+                    width: 162px;
+                    height: auto;
+                    margin-bottom: 48px;
+                    @include computer-scr {
+                        width: 155px;
+                        margin-bottom: 30px;
+                    }
+                    @include mini-tablet-scr {
+                        width: 160px;
+                    }
+                }
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: $bold;
+                    text-transform: uppercase;
+                    color: $brandColor;
+                    margin-bottom: 13px;
+                    @include computer-scr {
+                        font-size: 22px;
+                    }
+                    @include mini-tablet-scr {
+                        font-size: 25px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: $normal;
+                    color: $textOnWhite50;
+                    line-height: 25px;
+                    width: 275px;
+                    @include xl-computer-scr {
+                        width: 200px;
+                    }
+                    @include computer-scr {
+                        width: 185px;
+                        font-size: 18px;
+                    }
+                    @include mobile-scr {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+    }
+}

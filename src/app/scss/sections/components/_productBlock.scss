@@ -1,0 +1,592 @@
+.product-block {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0;
+    background-color: $black;
+    z-index: 5;
+    @include mini-tablet-scr {
+        padding: 60px 0;
+    }
+
+    &__container {
+        justify-content: space-between;
+        align-items: center;
+        @include lg-computer-scr {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+
+    .heading {
+        &-wrapper {
+            @extend %flexColumnStartCenter;
+            @include lg-computer-scr {
+                align-items: center;
+            }
+
+            .button-wrapper {
+                width: 80%;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 90px;
+                justify-content: space-between;
+                @include lg-computer-scr {
+                    align-items: center;
+                    height: 80px;
+                }
+                @include mini-tablet-scr {
+                    height: 90px
+                }
+
+                .outlined-cta {
+                    @extend %ctaOutlined;
+                    @include mobile-scr {
+                        margin-bottom: 15px
+                    }
+
+                    &__branded {
+                        @extend %ctaBrandedOutline
+                    }
+                }
+            }
+        }
+
+        &-container {
+            width: 100%;
+            @include lg-computer-scr {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            
+            h1 {
+                color: $white;
+                font-size: 48px;
+                font-weight: $bold;
+                line-height: 49px;
+                text-align: start;
+                margin-bottom: 15px;
+                width: 85%;
+                @include lg-computer-scr {
+                    text-align: center;
+                    width: 70%;
+                }
+                @include mini-tablet-scr {
+                    font-size: 35px;
+                    line-height: 37px;
+                    width: 90%;
+                }
+            }
+
+            p {
+                color: $textOnDark30;
+                text-align: start;
+                font-size: 12px;
+                font-weight: $normal;
+                margin-bottom: 25px;
+                @include lg-computer-scr {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .card-wrapper {
+        @extend %flexCenter;
+        flex-direction: row;
+        @include lg-computer-scr {
+            padding-top: 60px;
+        }
+        @include tablet-scr {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .card1 {
+            @extend %flexColumnCenterStart;
+            background-color: $productCard;
+            height: auto;
+            border-radius: 18px;
+            width: 50%;
+            padding: 45px 60px;
+            @include lg-computer-scr {
+                padding: 30px 30px;
+            }
+            @include tablet-scr {
+                width: 70%;
+                margin-bottom: 20px;
+            }
+            @include mini-tablet-scr {
+                width: 90%;
+            }
+            @include mobile-scr {
+                width: 100%;
+                padding: 30px 35px;
+            }
+
+            &__offers-list {
+                table {
+                    width: 100%;
+                    height: auto;
+    
+                    th {
+                        text-transform: uppercase;
+                        color: $white;
+                        font-weight: $bold;
+                        font-size: 25px;
+                        padding-bottom: 20px;
+                        text-align: center;
+                    }
+    
+                    tbody {
+                        min-width: 100%;
+                        height: auto;
+                        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+                        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+                    }
+    
+                    tr,
+                    td {
+                        min-width: 100%;
+                        height: auto;
+                    }
+    
+                    td {
+                        padding: 15px 0;
+                        text-align: start;
+                    }
+    
+                    ul {
+                        list-style: none;
+                        text-align: start;
+                        width: 100%;
+    
+                        li {
+                            position: relative;
+                            color: $white;
+                            font-size: 18px;
+                            line-height: 24px;
+                            padding-left: 25px;
+                            font-weight: $normal;
+                            margin: 20px 0;
+    
+                            &::before {
+                                content: '\e805';
+                                font-family: 'fontello';
+                                position: absolute;
+                                left: 0;
+                                top: -3px;
+                                bottom: 0;
+                                margin: auto;
+                                color: $white;
+                                font-size: 18px;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__number {
+                font-size: 113px;
+                font-weight: $bold;
+                color: $brandColor;
+                text-align: center;
+                margin-top: 35px;
+                line-height: 100px;
+                margin-bottom: 0;
+                @include mobile-scr {
+                    font-size: 90px;
+                }
+            }
+
+            &__footer-text {
+                color: $white;
+                margin: 0;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 14px;
+                font-weight: $normal;
+            }
+        }
+
+        .plus {
+            width: 40px;
+            height: 40px;
+        }
+
+        .card2 {
+            @extend %flexColumnCenterStart;
+            background-color: $productCard;
+            height: auto;
+            border-radius: 18px;
+            width: 42%;
+            padding: 45px 50px;
+            @include lg-computer-scr {
+                padding: 40px 30px;
+            }
+            @include tablet-scr {
+                width: 55%;
+                margin-top: 20px;
+            }
+            @include mini-tablet-scr {
+                width: 80%;
+            }
+            @include mobile-scr {
+                width: 100%;
+                padding: 40px 35px;
+            }
+
+            &__options-list {
+                table {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 30px;
+    
+                    th {
+                        text-transform: uppercase;
+                        color: $white;
+                        font-weight: $bold;
+                        font-size: 25px;
+                        padding-bottom: 20px;
+                        text-align: center;
+                    }
+    
+                    tbody {
+                        min-width: 100%;
+                        height: auto;
+                        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+                        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+                    }
+    
+                    tr,
+                    td {
+                        min-width: 100%;
+                        height: auto;
+                    }
+    
+                    td {
+                        padding: 15px 0 15px 35px;
+                        margin: 15px 0;
+
+                        p {
+                            position: relative;
+                            text-align: start;
+                            margin: 18px 0;
+                            line-height: 24px;
+                            color: $white;
+                            font-size: 18px;
+                            font-weight: $semiBold;
+    
+                            &::before {
+                                content: '\e805';
+                                font-family: 'fontello';
+                                position: absolute;
+                                left: -25px;
+                                top: -3px;
+                                bottom: 0;
+                                margin: auto;
+                                color: $white;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        list-style: none;
+                        text-align: start;
+                        margin-top: 5px;
+                        width: 100%;
+    
+                        li {
+                            position: relative;
+                            color: $white;
+                            font-size: 16px;
+                            font-weight: $light;
+                            margin-bottom: 5px;
+                            margin: 0;
+    
+                            &::before {
+                                content: '\e805';
+                                font-family: 'fontello';
+                                position: absolute;
+                                left: -25px;
+                                top: -3px;
+                                bottom: 0;
+                                margin: auto;
+                                color: $white;
+                                font-size: 18px;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &__footer-link {
+                display: none;
+                color: $brandColor;
+                text-decoration: none;
+                cursor: pointer;
+                user-select: none;
+                text-align: start;
+                font-size: 13px;
+                font-weight: $medium;
+                margin: 0;
+    
+                .arrow {
+                    font-size: 11px;
+                }
+            }
+    
+            &__footer-text {
+                @extend %flexRowStartCenter;
+                color: $white;
+                margin: 0;
+                cursor: pointer;
+                user-select: none;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 14px;
+                font-weight: $normal;
+    
+                .small-plus {
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 10px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+}
+
+.product-block-white {
+    background-color: $white;
+
+    .heading {
+        &-container {
+            h1,
+            p {
+                color: $black;
+            }
+        }
+    }
+
+    .card-wrapper {
+        .card1,
+        .card2 {
+            background-color: $tagBody;
+            box-shadow: $smoothShadow;
+        }
+
+        .card1 {
+            &__offers-list {
+                table {
+                    th {
+                        color: $brandColor;
+                    }
+
+                    tbody {
+                        border-bottom: 1px solid $textOnWhite50;
+                        border-top: 1px solid $textOnWhite50;
+                    }
+
+                    ul {
+                        li {
+                            color: $black;
+
+                            &::before {
+                                color: $textOnWhite50;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__footer-text {
+                color: $black;
+            }
+        }
+
+        .card2 {
+
+            &__options-list {
+                table {
+                    th {
+                        color: $brandColor;
+                    }
+
+                    tbody {
+                        border-bottom: 1px solid $textOnWhite50;
+                        border-top: 1px solid $textOnWhite50;
+
+                        :nth-child(5) {
+                            ul {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+
+                    td {
+                        padding: 30px 0 0 35px;
+
+                        p {
+                            margin-bottom: 8px;
+                            margin-top: 0;
+                            color: $black;
+    
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        li {
+                            margin-bottom: 5px;
+                            color: $black;
+
+                            &::before {
+                                color: $textOnWhite50;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__link {
+                display: flex;
+            }
+
+            &__footer-link {
+                display: flex;
+            }
+        }
+    }
+}
+
+#winbiz-local-block {
+    background-color: $white;
+
+    .heading {
+        &-container {
+            h1,
+            p {
+                color: $black;
+            }
+        }
+    }
+
+    .card-wrapper {
+        .card1,
+        .card2 {
+            background-color: $tagBody;
+            box-shadow: $smoothShadow;
+        }
+
+        .card1 {
+            &__offers-list {
+                table {
+                    th {
+                        color: $brandColor;
+                    }
+
+                    tbody {
+                        border-bottom: 1px solid #585858;
+                        border-top: 1px solid #585858;
+                    }
+
+                    ul {
+                        li {
+                            color: $black;
+
+                            &::before {
+                                color: $textOnWhite50;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__footer-text {
+                color: $black;
+            }
+        }
+
+        .card2 {
+            &__options-list {
+                table {
+                    th {
+                        color: $brandColor;
+                    }
+    
+                    tbody {
+                        border-bottom: 1px solid #585858;
+                        border-top: 1px solid #585858;
+                    }
+    
+                    tr,
+                    td {
+                        min-width: 100%;
+                        height: auto;
+                    }
+
+                    tr {
+                        &:nth-child(1) {
+                            td {
+                                padding-top: 20px;
+                            }
+                        }
+                        &:nth-child(5) {
+                            td {
+                                padding-bottom: 20px;
+                            }
+                        }
+                    }
+    
+                    td {
+                        padding: 0 0 0 35px;
+                        margin: 0;
+
+                        p {
+                            color: $black;
+                            margin: 6px 0;
+                            font-weight: $normal;
+    
+                            &::before {
+                                content: '\e805';
+                                font-family: 'fontello';
+                                position: absolute;
+                                left: -25px;
+                                top: -3px;
+                                bottom: 0;
+                                margin: auto;
+                                color: $textOnWhite50;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+
+            &__footer-text {
+                color: $black;
+            }
+        }
+    }
+}
